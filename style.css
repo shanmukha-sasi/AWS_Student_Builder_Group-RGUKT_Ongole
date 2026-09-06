@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="AWS Student Builder Group Mini Pitch event."
+    >
+
+    <title>AWS Student Builder Group | Mini Pitch</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="site-header">
+    <div class="header-inner">
+
+        <a href="index.html" class="brand">
+            <img
+                src="assets/aws-logo.png"
+                alt="AWS Student Builder Group Logo"
+            >
+            <span>AWS Student Builder Group</span>
+        </a>
+
+        <nav class="main-nav" aria-label="Main navigation">
+            <a href="index.html" data-page="index">Home</a>
+            <a href="team.html" data-page="team">Team</a>
+            <a href="workshops.html" data-page="workshops">Workshops</a>
+            <a href="hackathon.html" data-page="hackathon">Hackathon</a>
+            <a href="minipitch.html" data-page="minipitch">Mini Pitch</a>
+        </nav>
+
+    </div>
+</header>
+
+
+<main>
+
+    <section class="page-hero">
+
+        <div class="page-container">
+
+            <span class="eyebrow">IDEAS DESERVE A STAGE</span>
+
+            <h1>Mini Pitch</h1>
+
+            <p>
+                A short-form platform for students to present ideas,
+                receive feedback, and turn concepts into actionable
+                projects.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <section class="pitch-overview">
+
+        <div class="page-container">
+
+            <div class="section-heading">
+                <span class="eyebrow">EVENT OVERVIEW</span>
+                <h2>Pitch. Connect. Improve.</h2>
+            </div>
+
+
+            <div class="pitch-intro">
+
+                <p>
+                    Mini Pitch gives students an opportunity to explain
+                    their project ideas clearly, communicate their
+                    technical vision, and receive useful feedback from
+                    peers and mentors.
+                </p>
+
+            </div>
+
+
+            <div class="pitch-highlights">
+
+                <article>
+                    <span>01</span>
+
+                    <h3>Project Ideas</h3>
+
+                    <p>
+                        Participants present innovative ideas and
+                        explain the problems they want to solve.
+                    </p>
+                </article>
+
+
+                <article>
+                    <span>02</span>
+
+                    <h3>Technical Vision</h3>
+
+                    <p>
+                        Pitches communicate the proposed technology,
+                        architecture, and implementation approach.
+                    </p>
+                </article>
+
+
+                <article>
+                    <span>03</span>
+
+                    <h3>Community Feedback</h3>
+
+                    <p>
+                        Participants receive constructive feedback that
+                        helps strengthen their ideas.
+                    </p>
+                </article>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="feedback-section">
+
+        <div class="page-container">
+
+            <div class="section-heading">
+                <span class="eyebrow">PARTICIPANT FEEDBACK</span>
+                <h2>What Participants Said</h2>
+            </div>
+
+
+            <div class="feedback-grid">
+
+                <blockquote>
+                    <p>
+                        “The Mini Pitch helped me explain my project
+                        clearly and understand how to improve the idea.”
+                    </p>
+
+                    <cite>
+                        — Participant 01
+                    </cite>
+                </blockquote>
+
+
+                <blockquote>
+                    <p>
+                        “Getting feedback early helped us identify
+                        technical improvements before starting the
+                        implementation.”
+                    </p>
+
+                    <cite>
+                        — Participant 02
+                    </cite>
+                </blockquote>
+
+
+                <blockquote>
+                    <p>
+                        “It was a great opportunity to learn from other
+                        students and discover different approaches to
+                        solving problems.”
+                    </p>
+
+                    <cite>
+                        — Participant 03
+                    </cite>
+                </blockquote>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="gallery-section">
+
+        <div class="page-container">
+
+            <div class="section-heading">
+                <span class="eyebrow">EVENT MOMENTS</span>
+                <h2>Photo Gallery</h2>
+            </div>
+
+
+            <div class="image-grid pitch-gallery">
+
+                <figure>
+                    <div class="gallery-placeholder">
+                        PHOTO 01
+                    </div>
+                </figure>
+
+                <figure>
+                    <div class="gallery-placeholder">
+                        PHOTO 02
+                    </div>
+                </figure>
+
+                <figure>
+                    <div class="gallery-placeholder">
+                        PHOTO 03
+                    </div>
+                </figure>
+
+                <figure>
+                    <div class="gallery-placeholder">
+                        PHOTO 04
+                    </div>
+                </figure>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer class="site-footer">
+
+    <div class="footer-inner">
+
+        <p>
+            © <span class="current-year"></span>
+            AWS Student Builder Group. All rights reserved.
+        </p>
+
+        <div class="social-links">
+            <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a href="https://github.com/" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a href="https://x.com/" target="_blank" rel="noopener noreferrer">X</a>
+            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a>
+        </div>
+
+    </div>
+
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
