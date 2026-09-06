@@ -1,253 +1,1419 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+/* =========================================================
+   AWS STUDENT BUILDER GROUP
+   Global Styles
+   ========================================================= */
 
-    <meta
-        name="description"
-        content="AWS Student Builder Group Mini Pitch event."
-    >
 
-    <title>AWS Student Builder Group | Mini Pitch</title>
+/* ---------- RESET ---------- */
 
-    <link rel="stylesheet" href="style.css">
-</head>
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
-<body>
 
-<header class="site-header">
-    <div class="header-inner">
+html {
+    scroll-behavior: smooth;
+}
 
-        <a href="index.html" class="brand">
-            <img
-                src="assets/aws-logo.png"
-                alt="AWS Student Builder Group Logo"
-            >
-            <span>AWS Student Builder Group</span>
-        </a>
 
-        <nav class="main-nav" aria-label="Main navigation">
-            <a href="index.html" data-page="index">Home</a>
-            <a href="team.html" data-page="team">Team</a>
-            <a href="workshops.html" data-page="workshops">Workshops</a>
-            <a href="hackathon.html" data-page="hackathon">Hackathon</a>
-            <a href="minipitch.html" data-page="minipitch">Mini Pitch</a>
-        </nav>
+body {
+    min-height: 100vh;
 
-    </div>
-</header>
+    background: #ffffff;
+    color: #16191f;
 
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Helvetica,
+        Arial,
+        sans-serif;
 
-<main>
+    line-height: 1.6;
 
-    <section class="page-hero">
+    display: flex;
+    flex-direction: column;
+}
 
-        <div class="page-container">
 
-            <span class="eyebrow">IDEAS DESERVE A STAGE</span>
+img {
+    display: block;
+    max-width: 100%;
+}
 
-            <h1>Mini Pitch</h1>
 
-            <p>
-                A short-form platform for students to present ideas,
-                receive feedback, and turn concepts into actionable
-                projects.
-            </p>
+a {
+    color: inherit;
+    text-decoration: none;
+}
 
-        </div>
 
-    </section>
+button {
+    font: inherit;
+}
 
 
-    <section class="pitch-overview">
+/* ---------- VARIABLES ---------- */
 
-        <div class="page-container">
+:root {
+    --aws-orange: #ff9900;
+    --navy: #232f3e;
+    --slate: #16191f;
 
-            <div class="section-heading">
-                <span class="eyebrow">EVENT OVERVIEW</span>
-                <h2>Pitch. Connect. Improve.</h2>
-            </div>
+    --gray-100: #f7f8fa;
+    --gray-200: #eaedef;
+    --gray-400: #87909a;
+    --gray-600: #5f6872;
 
+    --container-width: min(38vw, 720px);
 
-            <div class="pitch-intro">
+    --radius-small: 8px;
+    --radius-medium: 14px;
+    --radius-large: 20px;
 
-                <p>
-                    Mini Pitch gives students an opportunity to explain
-                    their project ideas clearly, communicate their
-                    technical vision, and receive useful feedback from
-                    peers and mentors.
-                </p>
+    --shadow:
+        0 12px 35px rgba(35, 47, 62, 0.08);
 
-            </div>
+    --transition:
+        180ms ease;
+}
 
 
-            <div class="pitch-highlights">
+/* ---------- HEADER ---------- */
 
-                <article>
-                    <span>01</span>
+.site-header {
+    width: 100%;
 
-                    <h3>Project Ideas</h3>
+    background: #ffffff;
 
-                    <p>
-                        Participants present innovative ideas and
-                        explain the problems they want to solve.
-                    </p>
-                </article>
+    border-bottom:
+        1px solid var(--gray-200);
 
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
 
-                <article>
-                    <span>02</span>
 
-                    <h3>Technical Vision</h3>
+.header-inner {
+    width: min(94%, 1400px);
 
-                    <p>
-                        Pitches communicate the proposed technology,
-                        architecture, and implementation approach.
-                    </p>
-                </article>
+    margin: 0 auto;
 
+    min-height: 76px;
 
-                <article>
-                    <span>03</span>
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
-                    <h3>Community Feedback</h3>
+    gap: 24px;
+}
 
-                    <p>
-                        Participants receive constructive feedback that
-                        helps strengthen their ideas.
-                    </p>
-                </article>
 
-            </div>
+.brand {
+    display: flex;
+    align-items: center;
 
-        </div>
+    gap: 12px;
 
-    </section>
+    font-weight: 700;
+    color: var(--navy);
 
+    white-space: nowrap;
+}
 
-    <section class="feedback-section">
 
-        <div class="page-container">
+.brand img {
+    width: 44px;
+    height: 44px;
 
-            <div class="section-heading">
-                <span class="eyebrow">PARTICIPANT FEEDBACK</span>
-                <h2>What Participants Said</h2>
-            </div>
+    object-fit: contain;
+}
 
 
-            <div class="feedback-grid">
+.main-nav {
+    display: flex;
+    align-items: center;
+    gap: 4px;
 
-                <blockquote>
-                    <p>
-                        “The Mini Pitch helped me explain my project
-                        clearly and understand how to improve the idea.”
-                    </p>
+    overflow-x: auto;
+}
 
-                    <cite>
-                        — Participant 01
-                    </cite>
-                </blockquote>
 
+.main-nav a {
+    padding: 10px 12px;
 
-                <blockquote>
-                    <p>
-                        “Getting feedback early helped us identify
-                        technical improvements before starting the
-                        implementation.”
-                    </p>
+    font-size: 0.88rem;
+    font-weight: 600;
 
-                    <cite>
-                        — Participant 02
-                    </cite>
-                </blockquote>
+    color: var(--gray-600);
 
+    border-bottom: 3px solid transparent;
 
-                <blockquote>
-                    <p>
-                        “It was a great opportunity to learn from other
-                        students and discover different approaches to
-                        solving problems.”
-                    </p>
+    transition:
+        color var(--transition),
+        background var(--transition),
+        border-color var(--transition);
+}
 
-                    <cite>
-                        — Participant 03
-                    </cite>
-                </blockquote>
 
-            </div>
+.main-nav a:hover {
+    color: var(--navy);
 
-        </div>
+    background:
+        rgba(255, 153, 0, 0.08);
+}
 
-    </section>
 
+.main-nav a.active {
+    color: var(--navy);
 
-    <section class="gallery-section">
+    border-bottom-color:
+        var(--aws-orange);
 
-        <div class="page-container">
+    background:
+        rgba(255, 153, 0, 0.08);
+}
 
-            <div class="section-heading">
-                <span class="eyebrow">EVENT MOMENTS</span>
-                <h2>Photo Gallery</h2>
-            </div>
 
+/* ---------- CONTAINER ---------- */
 
-            <div class="image-grid pitch-gallery">
+.page-container {
+    width: var(--container-width);
 
-                <figure>
-                    <div class="gallery-placeholder">
-                        PHOTO 01
-                    </div>
-                </figure>
+    min-width: 320px;
 
-                <figure>
-                    <div class="gallery-placeholder">
-                        PHOTO 02
-                    </div>
-                </figure>
+    margin-left: auto;
+    margin-right: auto;
+}
 
-                <figure>
-                    <div class="gallery-placeholder">
-                        PHOTO 03
-                    </div>
-                </figure>
 
-                <figure>
-                    <div class="gallery-placeholder">
-                        PHOTO 04
-                    </div>
-                </figure>
+/* ---------- TYPOGRAPHY ---------- */
 
-            </div>
+h1,
+h2,
+h3,
+h4 {
+    color: var(--navy);
 
-        </div>
+    line-height: 1.2;
 
-    </section>
+    letter-spacing: -0.025em;
+}
 
-</main>
 
+h1 {
+    font-size: clamp(2.2rem, 4vw, 4.2rem);
+}
 
-<footer class="site-footer">
 
-    <div class="footer-inner">
+h2 {
+    font-size: clamp(1.8rem, 3vw, 2.8rem);
+}
 
-        <p>
-            © <span class="current-year"></span>
-            AWS Student Builder Group. All rights reserved.
-        </p>
 
-        <div class="social-links">
-            <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-            <a href="https://github.com/" target="_blank" rel="noopener noreferrer">GitHub</a>
-            <a href="https://x.com/" target="_blank" rel="noopener noreferrer">X</a>
-            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a>
-        </div>
+h3 {
+    font-size: 1.25rem;
+}
 
-    </div>
 
-</footer>
+p {
+    color: var(--gray-600);
+}
 
-<script src="script.js"></script>
 
-</body>
-</html>
+.eyebrow {
+    display: inline-block;
+
+    margin-bottom: 14px;
+
+    color: var(--aws-orange);
+
+    font-size: 0.72rem;
+    font-weight: 800;
+
+    letter-spacing: 0.13em;
+}
+
+
+.section-heading {
+    margin-bottom: 32px;
+}
+
+
+.section-heading h2 {
+    margin-bottom: 4px;
+}
+
+
+/* ---------- HERO ---------- */
+
+.hero {
+    min-height: 70vh;
+
+    display: flex;
+    align-items: center;
+
+    padding:
+        80px 0;
+}
+
+
+.hero h1 {
+    margin-bottom: 22px;
+}
+
+
+.hero h1 span {
+    display: block;
+
+    color: var(--aws-orange);
+}
+
+
+.hero-description {
+    max-width: 620px;
+
+    margin-bottom: 30px;
+
+    font-size: 1.05rem;
+}
+
+
+.hero-actions {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 12px;
+}
+
+
+/* ---------- INNER PAGE HERO ---------- */
+
+.page-hero {
+    padding:
+        90px 0 65px;
+
+    background:
+        linear-gradient(
+            180deg,
+            #ffffff 0%,
+            #f7f8fa 100%
+        );
+}
+
+
+.page-hero h1 {
+    margin-bottom: 18px;
+}
+
+
+.page-hero p {
+    font-size: 1rem;
+}
+
+
+/* ---------- BUTTONS ---------- */
+
+.btn {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    min-height: 44px;
+
+    padding:
+        10px 18px;
+
+    border-radius:
+        var(--radius-small);
+
+    font-size: 0.9rem;
+    font-weight: 700;
+
+    transition:
+        transform var(--transition),
+        box-shadow var(--transition),
+        background var(--transition);
+}
+
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+
+.btn-primary {
+    color: #ffffff;
+
+    background:
+        var(--navy);
+
+    box-shadow:
+        0 7px 18px rgba(35, 47, 62, 0.15);
+}
+
+
+.btn-primary:hover {
+    background:
+        #17212c;
+}
+
+
+.btn-secondary {
+    color: var(--navy);
+
+    border:
+        1px solid var(--gray-200);
+
+    background: #ffffff;
+}
+
+
+.btn-secondary:hover {
+    border-color:
+        var(--aws-orange);
+}
+
+
+/* ---------- MISSION ---------- */
+
+.mission-section {
+    padding:
+        80px 0;
+}
+
+
+.statement-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 18px;
+}
+
+
+.statement-card {
+    position: relative;
+
+    padding: 30px;
+
+    background: #ffffff;
+
+    border:
+        1px solid var(--gray-200);
+
+    border-radius:
+        var(--radius-medium);
+
+    box-shadow:
+        var(--shadow);
+}
+
+
+.statement-card.highlighted {
+    border-top:
+        4px solid var(--aws-orange);
+}
+
+
+.statement-card h3 {
+    margin-bottom: 12px;
+}
+
+
+.card-number {
+    margin-bottom: 25px;
+
+    color: var(--aws-orange);
+
+    font-size: 0.75rem;
+    font-weight: 800;
+
+    letter-spacing: 0.1em;
+}
+
+
+/* ---------- TEAM ---------- */
+
+.leader-section,
+.team-section,
+.workshops-section,
+.hackathon-overview,
+.winners-section,
+.media-section,
+.pitch-overview,
+.feedback-section,
+.gallery-section {
+    padding:
+        70px 0;
+}
+
+
+.leader-card {
+    display: grid;
+
+    grid-template-columns:
+        0.9fr 1.1fr;
+
+    gap: 28px;
+
+    padding: 20px;
+
+    border:
+        1px solid var(--gray-200);
+
+    border-radius:
+        var(--radius-large);
+
+    box-shadow:
+        var(--shadow);
+
+    background: #ffffff;
+}
+
+
+.leader-image {
+    min-height: 350px;
+
+    overflow: hidden;
+
+    border-radius:
+        var(--radius-medium);
+
+    background:
+        var(--gray-100);
+}
+
+
+.leader-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+
+.leader-content {
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+}
+
+
+.role-label,
+.member-role,
+.winner-label {
+    color: var(--aws-orange);
+
+    font-size: 0.7rem;
+    font-weight: 800;
+
+    letter-spacing: 0.1em;
+}
+
+
+.leader-content h3 {
+    margin-top: 8px;
+    margin-bottom: 4px;
+
+    font-size: 2rem;
+}
+
+
+.leader-content h4 {
+    margin-bottom: 18px;
+
+    color: var(--gray-600);
+
+    font-size: 0.95rem;
+
+    font-weight: 600;
+}
+
+
+.leader-content p {
+    margin-bottom: 24px;
+}
+
+
+.team-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 16px;
+}
+
+
+.team-card {
+    overflow: hidden;
+
+    border:
+        1px solid var(--gray-200);
+
+    border-radius:
+        var(--radius-medium);
+
+    background: #ffffff;
+
+    transition:
+        transform var(--transition),
+        box-shadow var(--transition);
+}
+
+
+.team-card:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        var(--shadow);
+}
+
+
+.member-photo {
+    width: 100%;
+    height: 130px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.member-photo.placeholder {
+    color: var(--navy);
+
+    background:
+        linear-gradient(
+            135deg,
+            #f1f3f5,
+            #e4e8ec
+        );
+
+    font-size: 1.8rem;
+    font-weight: 800;
+}
+
+
+.team-card-body {
+    padding: 20px;
+}
+
+
+.team-card-body h3 {
+    margin-bottom: 4px;
+}
+
+
+.member-role {
+    display: block;
+
+    margin-bottom: 12px;
+}
+
+
+/* ---------- WORKSHOPS ---------- */
+
+.workshop-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 16px;
+}
+
+
+.workshop-card {
+    padding: 24px;
+
+    border:
+        1px solid var(--gray-200);
+
+    border-radius:
+        var(--radius-medium);
+
+    background: #ffffff;
+
+    box-shadow:
+        var(--shadow);
+}
+
+
+.workshop-number {
+    margin-bottom: 22px;
+
+    color: var(--aws-orange);
+
+    font-weight: 800;
+}
+
+
+.workshop-card h3 {
+    margin-bottom: 12px;
+}
+
+
+.takeaways {
+    margin-top: 22px;
+
+    padding-top: 18px;
+
+    border-top:
+        1px solid var(--gray-200);
+}
+
+
+.takeaways strong {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: var(--navy);
+
+    font-size: 0.8rem;
+}
+
+
+.takeaways ul {
+    padding-left: 18px;
+
+    color: var(--gray-600);
+
+    font-size: 0.85rem;
+}
+
+
+.image-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 12px;
+}
+
+
+.image-grid figure {
+    min-height: 190px;
+
+    overflow: hidden;
+
+    border-radius:
+        var(--radius-medium);
+
+    background:
+        var(--gray-100);
+}
+
+
+.image-grid img {
+    width: 100%;
+    height: 100%;
+
+    min-height: 190px;
+
+    object-fit: cover;
+
+    transition:
+        transform 250ms ease;
+}
+
+
+.image-grid figure:hover img {
+    transform: scale(1.04);
+}
+
+
+/* ---------- HACKATHON ---------- */
+
+.overview-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 14px;
+}
+
+
+.overview-card {
+    padding: 22px;
+
+    border:
+        1px solid var(--gray-200);
+
+    border-radius:
+        var(--radius-medium);
+}
+
+
+.overview-icon {
+    display: block;
+
+    margin-bottom: 18px;
+
+    color: var(--aws-orange);
+
+    font-size: 0.8rem;
+    font-weight: 800;
+}
+
+
+.overview-card h3 {
+    margin-bottom: 10px;
+}
+
+
+.certificate-banner {
+    margin-top: 20px;
+
+    padding: 24px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    border-radius:
+        var(--radius-medium);
+
+    background:
+        var(--navy);
+}
+
+
+.certificate-banner h3,
+.certificate-banner p {
+    color: #ffffff;
+}
+
+
+.certificate-banner h3 {
+    margin-bottom: 8px;
+}
+
+
+.certificate-banner p {
+    opacity: 0.75;
+}
+
+
+.certificate-badge {
+    flex-shrink: 0;
+
+    padding: 12px 16px;
+
+    color: var(--navy);
+
+    background:
+        var(--aws-orange);
+
+    border-radius:
+        50px;
+
+    font-size: 0.7rem;
+    font-weight: 900;
+}
+
+
+.winner-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 16px;
+}
+
+
+.winner-card {
+    padding: 26px;
+
+    border:
+        1px solid var(--gray-200);
+
+    border-radius:
+        var(--radius-medium);
+
+    background: #ffffff;
+}
+
+
+.winner-card.first-place {
+    border-top:
+        4px solid var(--aws-orange);
+
+    box-shadow:
+        var(--shadow);
+}
+
+
+.winner-position {
+    margin-bottom: 18px;
+
+    color: var(--navy);
+
+    font-size: 2rem;
+    font-weight: 900;
+}
+
+
+.winner-card h3 {
+    margin-top: 8px;
+    margin-bottom: 12px;
+}
+
+
+.winner-card p {
+    margin-bottom: 22px;
+}
+
+
+.github-link {
+    color: var(--navy);
+
+    font-size: 0.85rem;
+    font-weight: 800;
+}
+
+
+.github-link:hover {
+    color: var(--aws-orange);
+}
+
+
+/* ---------- CAROUSEL ---------- */
+
+.carousel {
+    position: relative;
+
+    width: 100%;
+
+    overflow: hidden;
+
+    border-radius:
+        var(--radius-large);
+
+    background:
+        var(--gray-100);
+}
+
+
+.carousel-track {
+    display: flex;
+
+    transition:
+        transform 500ms ease;
+}
+
+
+.carousel-slide {
+    flex:
+        0 0 100%;
+}
+
+
+.carousel-slide img {
+    width: 100%;
+
+    height: 350px;
+
+    object-fit: cover;
+}
+
+
+.carousel-button {
+    position: absolute;
+
+    top: 50%;
+
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border: 0;
+
+    border-radius: 50%;
+
+    color: var(--navy);
+
+    background:
+        rgba(255, 255, 255, 0.92);
+
+    cursor: pointer;
+
+    transform:
+        translateY(-50%);
+
+    font-size: 1.8rem;
+
+    box-shadow:
+        0 5px 15px rgba(0, 0, 0, 0.12);
+
+    z-index: 2;
+}
+
+
+.carousel-button:hover {
+    background:
+        var(--aws-orange);
+}
+
+
+.carousel-prev {
+    left: 14px;
+}
+
+
+.carousel-next {
+    right: 14px;
+}
+
+
+/* ---------- VIDEO ---------- */
+
+.video-wrapper {
+    position: relative;
+
+    margin-top: 24px;
+
+    overflow: hidden;
+
+    border-radius:
+        var(--radius-large);
+
+    background:
+        #000;
+}
+
+
+.hackathon-video {
+    display: block;
+
+    width: 100%;
+
+    max-height: 450px;
+
+    object-fit: cover;
+}
+
+
+.video-fallback {
+    display: none;
+
+    padding: 30px;
+
+    color: #ffffff;
+
+    text-align: center;
+}
+
+
+.video-fallback.visible {
+    display: block;
+}
+
+
+.video-play-button {
+    margin-left: 8px;
+
+    padding: 8px 14px;
+
+    border: 0;
+
+    border-radius: 6px;
+
+    color: var(--navy);
+
+    background:
+        var(--aws-orange);
+
+    cursor: pointer;
+
+    font-weight: 700;
+}
+
+
+/* ---------- MINI PITCH ---------- */
+
+.pitch-intro {
+    margin-bottom: 25px;
+
+    padding: 25px;
+
+    border-left:
+        4px solid var(--aws-orange);
+
+    background:
+        var(--gray-100);
+}
+
+
+.pitch-highlights {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 15px;
+}
+
+
+.pitch-highlights article {
+    padding: 22px;
+
+    border:
+        1px solid var(--gray-200);
+
+    border-radius:
+        var(--radius-medium);
+}
+
+
+.pitch-highlights span {
+    display: block;
+
+    margin-bottom: 15px;
+
+    color: var(--aws-orange);
+
+    font-weight: 800;
+}
+
+
+.pitch-highlights h3 {
+    margin-bottom: 10px;
+}
+
+
+.feedback-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 15px;
+}
+
+
+.feedback-grid blockquote {
+    padding: 24px;
+
+    border:
+        1px solid var(--gray-200);
+
+    border-radius:
+        var(--radius-medium);
+
+    background: #ffffff;
+
+    box-shadow:
+        var(--shadow);
+}
+
+
+.feedback-grid p {
+    margin-bottom: 18px;
+
+    color: var(--navy);
+
+    font-weight: 500;
+}
+
+
+.feedback-grid cite {
+    color: var(--gray-400);
+
+    font-size: 0.8rem;
+
+    font-style: normal;
+}
+
+
+.gallery-placeholder {
+    width: 100%;
+    min-height: 190px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    color: var(--gray-400);
+
+    background:
+        linear-gradient(
+            135deg,
+            #f4f5f6,
+            #e7eaed
+        );
+
+    font-size: 0.75rem;
+    font-weight: 800;
+
+    letter-spacing: 0.1em;
+}
+
+
+/* ---------- FOOTER ---------- */
+
+.site-footer {
+    margin-top: auto;
+
+    border-top:
+        1px solid var(--gray-200);
+
+    background:
+        var(--gray-100);
+}
+
+
+.footer-inner {
+    width: min(94%, 1400px);
+
+    min-height: 90px;
+
+    margin: 0 auto;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+}
+
+
+.footer-inner p {
+    font-size: 0.78rem;
+}
+
+
+.social-links {
+    display: flex;
+
+    gap: 14px;
+}
+
+
+.social-links a {
+    color: var(--gray-600);
+
+    font-size: 0.78rem;
+    font-weight: 700;
+
+    transition:
+        color var(--transition);
+}
+
+
+.social-links a:hover {
+    color: var(--aws-orange);
+}
+
+
+/* =========================================================
+   RESPONSIVE DESIGN
+   ========================================================= */
+
+
+/* Tablets */
+
+@media (max-width: 900px) {
+
+    :root {
+        --container-width: min(70vw, 720px);
+    }
+
+
+    .header-inner {
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        padding:
+            14px 0;
+    }
+
+
+    .main-nav {
+        width: 100%;
+    }
+
+
+    .statement-grid,
+    .leader-card,
+    .team-grid,
+    .workshop-grid,
+    .overview-grid,
+    .winner-grid,
+    .pitch-highlights,
+    .feedback-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+
+    .leader-card {
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .leader-image {
+        min-height: 300px;
+    }
+
+
+    .image-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+}
+
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    :root {
+        --container-width: calc(100% - 32px);
+    }
+
+
+    .header-inner {
+        width:
+            calc(100% - 24px);
+    }
+
+
+    .brand span {
+        font-size: 0.9rem;
+    }
+
+
+    .main-nav {
+        gap: 0;
+    }
+
+
+    .main-nav a {
+        flex-shrink: 0;
+
+        padding:
+            8px 9px;
+
+        font-size: 0.75rem;
+    }
+
+
+    .hero {
+        min-height:
+            65vh;
+
+        padding:
+            60px 0;
+    }
+
+
+    .hero-actions {
+        flex-direction: column;
+    }
+
+
+    .btn {
+        width: 100%;
+    }
+
+
+    .page-hero {
+        padding:
+            60px 0 45px;
+    }
+
+
+    .statement-grid,
+    .team-grid,
+    .workshop-grid,
+    .overview-grid,
+    .winner-grid,
+    .pitch-highlights,
+    .feedback-grid,
+    .image-grid {
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .leader-image {
+        min-height: 260px;
+    }
+
+
+    .certificate-banner {
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+
+    .certificate-badge {
+        align-self: flex-start;
+    }
+
+
+    .carousel-slide img {
+        height: 230px;
+    }
+
+
+    .footer-inner {
+        padding:
+            24px 0;
+
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+}
+
+
+/* Reduced motion */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+}
