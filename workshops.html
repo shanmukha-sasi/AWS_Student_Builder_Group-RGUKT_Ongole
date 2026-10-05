@@ -3,82 +3,615 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="AWS Student Builder Group workshops and events.">
-    <title>AWS Student Builder Group | Workshops</title>
+    <meta name="description" content="AWS Student Builder Group Workshops & Events - Hands-on cloud labs, technical awareness sessions, networking summits, and AWS certification prep at RGUKT Ongole.">
+    <meta name="theme-color" content="#07111f">
+    <title>Events &amp; Workshops | AWS Student Builder Group RGUKT Ongole</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <header class="site-header">
+<body class="page-workshops">
+    <!-- Sticky Glass Navigation -->
+    <header class="site-header" id="siteHeader">
         <div class="header-inner">
-            <a href="index.html" class="brand">
-                <img src="assets/aws-logo.png" alt="AWS Logo">
-                <span>AWS Student Builder Group RGUKT Ongole</span>
+            <a href="index.html" class="brand" aria-label="AWS Student Builder Group RGUKT Ongole Home">
+                <span class="brand-badge">AWS</span>
+                <div class="brand-text">
+                    <span class="brand-title">Student Builder Group</span>
+                    <span class="brand-sub">RGUKT Ongole</span>
+                </div>
             </a>
-            <nav class="main-nav" aria-label="Main navigation">
-                <a href="index.html" data-page="index">Home</a>
-                <a href="team.html" data-page="team">Team</a>
-                <a href="workshops.html" data-page="workshops">Workshops</a>
-                <a href="hackathon.html" data-page="hackathon">Hackathon</a>
-                <a href="minipitch.html" data-page="minipitch">Mini Pitch</a>
+
+            <button class="mobile-nav-toggle" id="mobileNavToggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mainNav">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+
+            <nav class="main-nav" id="mainNav" aria-label="Main navigation">
+                <a href="index.html#about" class="nav-link">About</a>
+                <a href="workshops.html" class="nav-link active" aria-current="page">Events &amp; Workshops</a>
+                <a href="hackathon.html" class="nav-link">Hackathons</a>
+                <a href="minipitch.html" class="nav-link">Minipitches</a>
+                <a href="challenges.html" class="nav-link">Challenges</a>
+                <a href="index.html#team" class="nav-link">Team</a>
+                <a href="https://chat.whatsapp.com/Hy5V2t7DV6SDbpdqzxD9fQ" target="_blank" rel="noopener noreferrer" class="btn btn-nav-cta">
+                    <span>Join Community</span>
+                    <svg class="icon-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </a>
             </nav>
         </div>
     </header>
 
     <main>
-        <section class="page-hero">
+        <!-- Page Introduction Header -->
+        <section class="page-intro-section">
             <div class="page-container">
-                <span class="eyebrow">LEARN BY BUILDING</span>
-                <h1>Workshops & Events</h1>
-                <p>Practical sessions designed to turn technical concepts into hands-on experience.</p>
-            </div>
-        </section>
-
-        <section class="workshops-section">
-            <div class="page-container">
-                <div class="section-heading">
-                    <span class="eyebrow">PAST WORKSHOPS</span>
-                    <h2>What We Have Built</h2>
-                </div>
-                <div class="workshop-grid">
-                    <article class="workshop-card">
-                        <div class="workshop-number">01</div>
-                        <h3>AWS Cloud Fundamentals</h3>
-                        <p>An introductory workshop covering cloud concepts, AWS services, deployment fundamentals, and practical cloud architecture.</p>
-                    </article>
-                    <article class="workshop-card">
-                        <div class="workshop-number">02</div>
-                        <h3>Machine Learning Workshop</h3>
-                        <p>A practical introduction to machine learning workflows, model training, evaluation, and experimentation.</p>
-                    </article>
-                    <article class="workshop-card">
-                        <div class="workshop-number">03</div>
-                        <h3>Build & Deploy</h3>
-                        <p>A hands-on development session focused on taking an application from local development to a deployable environment.</p>
-                    </article>
+                <div class="intro-content text-center">
+                    <span class="eyebrow">CONTINUOUS LEARNING &bull; DEPLOYMENT FOCUS</span>
+                    <h1 class="page-main-title">Events &amp; Hands-on Workshops</h1>
+                    <p class="page-lead-text">
+                        Bridging foundational cloud concepts with live architecture. From introductory cloud awareness to production-ready serverless microservices, discover sessions designed to turn code into deployed reality.
+                    </p>
                 </div>
             </div>
         </section>
 
-        <section class="gallery-section">
+        <!-- Active Events Hero: High Priority Upcoming Workshop Banner with Countdown -->
+        <section class="active-event-section" aria-label="Upcoming Featured Event">
             <div class="page-container">
-                <div class="section-heading">
-                    <span class="eyebrow">EVENT HIGHLIGHTS</span>
-                    <h2>Workshop Gallery</h2>
+                <div class="active-workshop-banner">
+                    <div class="banner-top-ribbon">
+                        <div class="ribbon-status">
+                            <span class="status-indicator"></span>
+                            <span class="status-text">IMMEDIATE UPCOMING SESSION</span>
+                        </div>
+                        <div class="ribbon-location">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                            <span>Online &bull; Gmeet</span>
+                        </div>
+                    </div>
+
+                    <div class="banner-core-grid">
+                        <div class="banner-info">
+                            <span class="track-tag">Certification prep & networiking event</span>
+                            <h2 class="active-event-title">AWS Serverless Architecture &amp; GenAI Deployment Sprint</h2>
+                            <p class="active-event-description">
+                                We are bringing in an expert who holds 13 AWS certifications to cut through the noise and show you exactly how to pick, prepare for, and clear the certifications that actually matter for your career.
+                            </p>
+
+                            <!-- Structured Agenda -->
+                            <div class="event-agenda-box">
+                                <h3 class="agenda-title">Session Agenda &amp; Milestones</h3>
+                                <div class="agenda-timeline">
+                                    <div class="agenda-item">
+                                        <span class="agenda-time">03:30 PM - 5:30 PM</span>
+                                        <div class="agenda-detail">
+                                            <strong>
+                                            Part 1: The AWS Certification Roadmap 
+                                            <br>
+                                          
+                                            Part 2: Open Q&A & Networking
+                                            </strong>
+                                           
+                                        </div>
+                                    </div>
+                                    
+                              
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Real-time Countdown & Registration Action Card -->
+                        <div class="banner-action-card">
+                            <div class="action-card-inner">
+                                <span class="action-card-label">REGISTRATION CLOSES IN:</span>
+                                
+                                <div class="countdown-clock" id="workshopCountdown" data-target-date="2026-10-11T03:30:00">
+                                    <div class="time-block">
+                                        <span class="time-value" id="cdDays">00</span>
+                                        <span class="time-label">Days</span>
+                                    </div>
+                                    <span class="time-divider">:</span>
+                                    <div class="time-block">
+                                        <span class="time-value" id="cdHours">00</span>
+                                        <span class="time-label">Hours</span>
+                                    </div>
+                                    <span class="time-divider">:</span>
+                                    <div class="time-block">
+                                        <span class="time-value" id="cdMins">00</span>
+                                        <span class="time-label">Mins</span>
+                                    </div>
+                                    <span class="time-divider">:</span>
+                                    <div class="time-block">
+                                        <span class="time-value" id="cdSecs">00</span>
+                                        <span class="time-label">Secs</span>
+                                    </div>
+                                </div>
+
+                                <div class="perks-checklist">
+                                    <div class="perk-item">
+                                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                        <span>AWS Participation certificate provided</span>
+                                    </div>
+                                    <div class="perk-item">
+                                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                        <span>Official Certificate of participation</span>
+                                    </div>
+                                    <div class="perk-item">
+                                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                        <span>Direct 1-on-1 Mentor Guidance</span>
+                                    </div>
+                                </div>
+
+                                <a href="https://www.meetup.com/aws-sbg-at-rajiv-gandhi-university-of-knowledge-tech-ongole/events/316840244/?utm_medium=referral&utm_campaign=share-btn_savedevents_share_modal&utm_source=link&utm_version=v2&member_id=481415057" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-register-main">
+                                    <span>Register Now for Free</span>
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                                </a>
+
+                                <p class="action-card-footer">
+                                    Limited seats available &bull; Open exclusively to every student
+                                </p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+            </div>
+        </section>
+
+        <!-- Our Event Tracks: 4-Column Structured Layout -->
+        <section class="event-tracks-section">
+            <div class="page-container">
+                <div class="section-header text-center">
+                    <span class="eyebrow">EVENT FRAMEWORK</span>
+                    <h2 class="section-title">Our Four Operational Event Tracks</h2>
+                    <p class="section-lead">A progressive learning framework structured to guide members from foundational awareness to certified cloud mastery.</p>
+                </div>
+
+                <div class="tracks-grid">
+                    <!-- Track A -->
+                    <div class="track-card">
+                        <div class="track-card-top">
+                            <span class="track-id">Track A</span>
+                            <div class="track-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+                            </div>
+                        </div>
+                        <h3 class="track-name">Technical Awareness</h3>
+                        <p class="track-summary">
+                            Foundational sessions demystifying modern cloud concepts, multi-region architectures, microservices, and industry technology trends directly shaping enterprise engineering.
+                        </p>
+                        <div class="track-topics">
+                            <span class="topic-pill">Cloud Fundamentals</span>
+                            <span class="topic-pill">Shared Responsibility</span>
+                            <span class="topic-pill">Enterprise Trends</span>
+                        </div>
+                    </div>
+
+                    <!-- Track B -->
+                    <div class="track-card highlight-track">
+                        <div class="track-card-top">
+                            <span class="track-id">Track B</span>
+                            <div class="track-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+                            </div>
+                        </div>
+                        <h3 class="track-name">Hands-on Workshops</h3>
+                        <p class="track-summary">
+                            Live deployment labs where students configure AWS consoles, author Infrastructure-as-Code scripts, spin up serverless backends, and debug active services under real workloads.
+                        </p>
+                        <div class="track-topics">
+                            <span class="topic-pill">Serverless &amp; Lambda</span>
+                            <span class="topic-pill">VPC &amp; Networking</span>
+                            <span class="topic-pill">Docker &amp; Containers</span>
+                        </div>
+                    </div>
+
+                    <!-- Track C -->
+                    <div class="track-card">
+                        <div class="track-card-top">
+                            <span class="track-id">Track C</span>
+                            <div class="track-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                            </div>
+                        </div>
+                        <h3 class="track-name">Networking &amp; Community</h3>
+                        <p class="track-summary">
+                            Peer-to-peer collaboration summits, guest lectures with industry cloud architects, live speaker Q&amp;As, and cross-discipline team-forming sessions for upcoming hackathons.
+                        </p>
+                        <div class="track-topics">
+                            <span class="topic-pill">Architect Q&amp;A</span>
+                            <span class="topic-pill">Peer Collaboration</span>
+                            <span class="topic-pill">Project Showcases</span>
+                        </div>
+                    </div>
+
+                    <!-- Track D -->
+                    <div class="track-card">
+                        <div class="track-card-top">
+                            <span class="track-id">Track D</span>
+                            <div class="track-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg>
+                            </div>
+                        </div>
+                        <h3 class="track-name">Certification Prep</h3>
+                        <p class="track-summary">
+                            Targeted study groups, curated whitepaper roadmaps, practice diagnostic assessments, and exam voucher guidance for AWS Certified Cloud Practitioner and Solutions Architect Associate.
+                        </p>
+                        <div class="track-topics">
+                            <span class="topic-pill">AWS CCP</span>
+                            <span class="topic-pill">Solutions Architect</span>
+                            <span class="topic-pill">Practice Exam Labs</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Historical Record: Searchable Past Event Archive & Gallery -->
+        <section class="past-events-section" id="archive">
+            <div class="page-container">
+                <div class="section-header">
+                    <div class="header-split">
+                        <div>
+                            <span class="eyebrow">HISTORICAL RECORD</span>
+                            <h2 class="section-title">Past Event Archive</h2>
+                            <p class="section-lead">Explore summaries, recorded keynote presentations, downloadable slide decks, and photo archives from our hosted events.</p>
+                        </div>
+                        
+                        <!-- Search & Filter Controls -->
+                        <div class="archive-controls">
+                            <div class="search-input-wrapper">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                                <input type="text" id="eventSearchInput" placeholder="Search past events by name or topic..." aria-label="Search past events">
+                            </div>
+                            <div class="filter-pills" role="tablist" aria-label="Event category filters">
+                                <button class="filter-btn active" data-category="all" role="tab" aria-selected="true">All Events</button>
+                                <button class="filter-btn" data-category="workshop" role="tab" aria-selected="false">Workshops</button>
+                                <button class="filter-btn" data-category="outreach" role="tab" aria-selected="false">Campus Outreach</button>
+                                <button class="filter-btn" data-category="inauguration" role="tab" aria-selected="false">Inaugurations</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Archive Cards Grid -->
+                <div class="archive-grid" id="archiveContainer">
+                    <!-- Event 1: Inauguration -->
+                    <article class="archive-card" data-category="inauguration">
+                        <div class="archive-card-image">
+                            <img src="assets/AWS Website_photos /Inauguration /image2.jpeg" alt="AWS SBG Official Campus Inauguration Ceremony" loading="lazy">
+                            <span class="event-badge">Milestone</span>
+                        </div>
+                        <div class="archive-card-body">
+                            <div class="archive-meta">
+                                <span class="meta-date">Inaugural Launch</span>
+                                <span class="meta-dot">&bull;</span>
+                                <span class="meta-track">Keynote &amp; Foundation</span>
+                            </div>
+                            <h3 class="archive-title">AWS Student Builder Group Official Campus Inauguration</h3>
+                            <p class="archive-text">
+                                The official inauguration ceremony launching the AWS Student Builder Group chapter at RGUKT Ongole. The inaugural address established our charter for cloud enablement, project-based engineering, and peer mentorship.
+                            </p>
+                            
+                            <div class="archive-gallery-strip">
+                                <img src="assets/AWS Website_photos /Inauguration /image2.jpeg" alt="Inauguration stage moment" loading="lazy">
+                                <img src="assets/AWS Website_photos /Inauguration /image3.jpg" alt="Faculty coordinator and student builders inaugurating the chapter" loading="lazy">
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Event 2: AWSSBG_Event1 Workshop -->
+                    <article class="archive-card" data-category="workshop">
+                        <div class="archive-card-image">
+                            <img src="assets/AWS Website_photos /AWSSBG_Event1/image4.jpg" alt="AWS Cloud Fundamentals Hands-on Workshop" loading="lazy">
+                            <span class="event-badge">Hands-on Lab</span>
+                        </div>
+                        <div class="archive-card-body">
+                            <div class="archive-meta">
+                                <span class="meta-date">Workshop 01</span>
+                                <span class="meta-dot">&bull;</span>
+                                <span class="meta-track">Cloud Architecture</span>
+                            </div>
+                            <h3 class="archive-title">AWS Cloud Architecture &amp; Core Services Workshop</h3>
+                            <p class="archive-text">
+                                An intensive hands-on lab covering virtual private clouds (VPCs), EC2 compute provisioning, S3 static web hosting, and security group rules. Over 60 students built live deployment environments.
+                            </p>
+                            
+                            <div class="archive-gallery-strip">
+                                <img src="assets/AWS Website_photos /AWSSBG_Event1/image1.jpg" alt="Lab workshop cohort in session" loading="lazy">
+                                <img src="assets/AWS Website_photos /AWSSBG_Event1/image2.jpg" alt="Student builders working on AWS console" loading="lazy">
+                                <img src="assets/AWS Website_photos /AWSSBG_Event1/image3.jpg" alt="Architecture explanation on projector" loading="lazy">
+                                <img src="assets/AWS Website_photos /AWSSBG_Event1/image4.jpg" alt="Students debugging cloud deployment" loading="lazy">
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Event 3: Classroom Announcements -->
+                    <article class="archive-card" data-category="outreach">
+                        <div class="archive-card-image">
+                            <img src="assets/AWS Website_photos /ClassRoom_Announcemnts/image1.jpg" alt="Classroom Outreach Campaign at RGUKT Ongole" loading="lazy">
+                            <span class="event-badge">Outreach</span>
+                        </div>
+                        <div class="archive-card-body">
+                            <div class="archive-meta">
+                                <span class="meta-date">Campus Campaign</span>
+                                <span class="meta-dot">&bull;</span>
+                                <span class="meta-track">Community Growth</span>
+                            </div>
+                            <h3 class="archive-title">Campus-wide Builder Outreach &amp; Induction Campaign</h3>
+                            <p class="archive-text">
+                                A dynamic multi-department classroom outreach tour across RGUKT Ongole academic blocks, introducing undergraduate students to AWS Educate, student developer benefits, and upcoming community workshops.
+                            </p>
+                            
+                            <div class="archive-gallery-strip">
+                                <img src="assets/AWS Website_photos /ClassRoom_Announcemnts/image1.jpg" alt="Lead presenting to engineering class" loading="lazy">
+                                <img src="assets/AWS Website_photos /ClassRoom_Announcemnts/image2.jpg" alt="Students engaging with builder community overview" loading="lazy">
+                                <img src="assets/AWS Website_photos /ClassRoom_Announcemnts/image3.jpg" alt="Classroom announcement Q&A" loading="lazy">
+                                <img src="assets/AWS Website_photos /ClassRoom_Announcemnts/image4.jpg" alt="Outreach presentation in seminar hall" loading="lazy">
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Event 4: Event 1 Success Meet -->
+                    <article class="archive-card" data-category="workshop">
+                        <div class="archive-card-image">
+                            <img src="assets/AWS Website_photos /Event1_SuccessMeet/image4.jpg" alt="Event 1 Cohort Review and Success Meet" loading="lazy">
+                            <span class="event-badge">Cohort Review</span>
+                        </div>
+                        <div class="archive-card-body">
+                            <div class="archive-meta">
+                                <span class="meta-date">Post-Event Summit</span>
+                                <span class="meta-dot">&bull;</span>
+                                <span class="meta-track">Peer Evaluation</span>
+                            </div>
+                            <h3 class="archive-title">Workshop Cohort Review &amp; Success Meet</h3>
+                            <p class="archive-text">
+                                A collaborative retrospection and showcase session where student teams presented their live deployed projects, addressed cloud architecture bottlenecks, and received guidance from core committee mentors.
+                            </p>
+                            
+                            <div class="archive-gallery-strip">
+                                <img src="assets/AWS Website_photos /Event1_SuccessMeet/image4.jpg" alt="Success meet core team assembly" loading="lazy">
+                                <img src="assets/AWS Website_photos /Event1_SuccessMeet/image5.jpg" alt="Student presentation during review session" loading="lazy">
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Event 5: Event 2 Masterclass -->
+                    <article class="archive-card" data-category="workshop">
+                        <div class="archive-card-image">
+                            <img src="assets/AWS Website_photos /Event2/image1.png" alt="AWS Advanced Services & Deployment Masterclass" loading="lazy">
+                            <span class="event-badge">Masterclass</span>
+                        </div>
+                        <div class="archive-card-body">
+                            <div class="archive-meta">
+                                <span class="meta-date">Masterclass 02</span>
+                                <span class="meta-dot">&bull;</span>
+                                <span class="meta-track">DevOps &amp; Security</span>
+                            </div>
+                            <h3 class="archive-title">Cloud Infrastructure Security &amp; Continuous Deployment</h3>
+                            <p class="archive-text">
+                                Deep dive into AWS security controls, automated Git-driven deployments with AWS CodePipeline, and monitoring system availability with CloudWatch metrics and alarms.
+                            </p>
+                            
+                            <div class="archive-gallery-strip">
+                                <img src="assets/AWS Website_photos /Event2/image1.png" alt="Architecture diagram and pipeline demonstration" loading="lazy">
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Curated Event Moments Photo Gallery -->
+        <section class="gallery-showcase-section">
+            <div class="page-container">
+                <div class="section-header text-center">
+                    <span class="eyebrow">PHOTO ARCHIVE</span>
+                    <h2 class="section-title">Moments from the Floor</h2>
+                    <p class="section-lead">Tap or click any image to enlarge and explore genuine moments from our campus workshops and events.</p>
+                </div>
+
                 <div class="image-grid">
-                    <img src="assets/workshops/workshop1.jpg" alt="Workshop highlight 1">
-                    <img src="assets/workshops/workshop2.jpg" alt="Workshop highlight 2">
-                    <img src="assets/workshops/workshop3.jpg" alt="Workshop highlight 3">
+                    <div class="gallery-card">
+                        <img src="assets/AWS Website_photos /Inauguration /image3.jpg" alt="Inaugural lamp lighting and speech at RGUKT Ongole" loading="lazy">
+                        <div class="gallery-caption">Inauguration Summit &bull; RGUKT Ongole</div>
+                    </div>
+                    <div class="gallery-card">
+                        <img src="assets/AWS Website_photos /AWSSBG_Event1/image5.jpg" alt="Students writing architecture configuration during workshop" loading="lazy">
+                        <div class="gallery-caption">Hands-on Cloud Lab 01</div>
+                    </div>
+                    <div class="gallery-card">
+                        <img src="assets/AWS Website_photos /AWSSBG_Event1/image6.jpg" alt="Collaborative debugging in progress" loading="lazy">
+                        <div class="gallery-caption">Gifts Handover to active participants</div>
+                    </div>
+                    <div class="gallery-card">
+                        <img src="assets/AWS Website_photos /ClassRoom_Announcemnts/image5.jpg" alt="Campus outreach presentation in lecture hall" loading="lazy">
+                        <div class="gallery-caption">Builder Outreach Tour</div>
+                    </div>
+                    <div class="gallery-card">
+                        <img src="assets/AWS Website_photos /ClassRoom_Announcemnts/image6.jpg" alt="Students showing enthusiasm for AWS community activities" loading="lazy">
+                        <div class="gallery-caption">Community Enrollment Drive</div>
+                    </div>
+                    <div class="gallery-card">
+                        <img src="assets/AWS Website_photos /Event1_SuccessMeet/image5.jpg" alt="Participant delivering project presentation" loading="lazy">
+                        <div class="gallery-caption">Cohort Retrospective &amp; Review</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Callout -->
+        <section class="join-banner-section">
+            <div class="page-container">
+                <div class="cta-inner-card">
+                    <div class="cta-text">
+                        <span class="eyebrow eyebrow-light">NEVER MISS A SESSION</span>
+                        <h2>Stay Updated on Upcoming Workshops</h2>
+                        <p>Our workshops have limited seating to guarantee individual lab workstations. Join our WhatsApp community broadcast channel for early-bird access to event registration links.</p>
+                    </div>
+                    <div class="cta-actions">
+                        <a href="https://chat.whatsapp.com/Hy5V2t7DV6SDbpdqzxD9fQ" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-large">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+                            <span>Join WhatsApp Community</span>
+                        </a>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
 
+    <!-- Global Footer -->
     <footer class="site-footer">
-        <div class="footer-inner">
-            <p><span class="current-year"></span> AWS Student Builder Group. All rights reserved.</p>
+        <div class="page-container footer-container">
+            <div class="footer-grid">
+                <!-- Col 1: Identity -->
+                <div class="footer-col col-brand">
+                    <div class="brand footer-brand">
+                        <span class="brand-badge">AWS</span>
+                        <div class="brand-text">
+                            <span class="brand-title">Student Builder Group</span>
+                            <span class="brand-sub">RGUKT Ongole</span>
+                        </div>
+                    </div>
+                    <p class="footer-description">
+                        Empowering undergraduate engineers to design, build, and deploy resilient cloud architecture. A student-powered tech initiative affiliated with Rajiv Gandhi University of Knowledge Technologies, Ongole.
+                    </p>
+                    <div class="footer-social-row">
+                        <a href="https://www.linkedin.com/company/aws-sbg-rgukt-ongole/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg></a>
+                        <a href="https://www.instagram.com/awssbgrguktongole" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+                        <a href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg></a>
+                    </div>
+                </div>
+
+                <!-- Col 2: Navigation -->
+                <div class="footer-col">
+                    <h4 class="footer-heading">Platform</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html#about">About Community</a></li>
+                        <li><a href="workshops.html">Events &amp; Workshops</a></li>
+                        <li><a href="hackathon.html">Hackathons</a></li>
+                        <li><a href="minipitch.html">Minipitches</a></li>
+                        <li><a href="challenges.html">Challenges</a></li>
+                        <li><a href="index.html#team">Leadership Tree</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3: Community & Governance -->
+                <div class="footer-col">
+                    <h4 class="footer-heading">Governance</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html#about">Code of Conduct</a></li>
+                        <li><a href="index.html#offerings">Builder Guidelines</a></li>
+                        <li><a href="https://aws.amazon.com" target="_blank" rel="noopener noreferrer">AWS Educate</a></li>
+                        <li><a href="https://rguktong.ac.in" target="_blank" rel="noopener noreferrer">RGUKT Ongole Portal</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 4: Contact -->
+                <div class="footer-col">
+                    <h4 class="footer-heading">Get Involved</h4>
+                    <p class="footer-text">Interested in mentoring, speaking at our tracks, or collaborating on a cloud challenge?</p>
+                    <a href="mailto:awssbg@rguktong.ac.in" class="footer-email">awssbg@rguktong.ac.in</a>
+                    <div class="footer-badge-pill">Campuses: RGUKT Ongole</div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; <span class="current-year">2026</span> AWS Student Builder Group &bull; RGUKT Ongole. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <span>Designed for Builders</span>
+                    <span>&bull;</span>
+                    <span>Powered by AWS</span>
+                </div>
+            </div>
         </div>
     </footer>
+
+    <!-- Workshops Real-time Countdown & Archive Search/Filter Script -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            // 1. Live Countdown Timer
+            const countdownEl = document.getElementById("workshopCountdown");
+            if (countdownEl) {
+                const targetDate = new Date(countdownEl.dataset.targetDate || "2026-11-15T09:30:00").getTime();
+                const daysEl = document.getElementById("cdDays");
+                const hoursEl = document.getElementById("cdHours");
+                const minsEl = document.getElementById("cdMins");
+                const secsEl = document.getElementById("cdSecs");
+
+                function updateCountdown() {
+                    const now = new Date().getTime();
+                    const diff = targetDate - now;
+
+                    if (diff <= 0) {
+                        daysEl.textContent = "00";
+                        hoursEl.textContent = "00";
+                        minsEl.textContent = "00";
+                        secsEl.textContent = "00";
+                        return;
+                    }
+
+                    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+                    const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                    const mins = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+                    const secs = Math.floor((diff % (1000 * 60)) / 1000);
+
+                    daysEl.textContent = String(days).padStart(2, "0");
+                    hoursEl.textContent = String(hours).padStart(2, "0");
+                    minsEl.textContent = String(mins).padStart(2, "0");
+                    secsEl.textContent = String(secs).padStart(2, "0");
+                }
+                updateCountdown();
+                setInterval(updateCountdown, 1000);
+            }
+
+            // 2. Search & Category Filter for Event Archive
+            const searchInput = document.getElementById("eventSearchInput");
+            const filterBtns = document.querySelectorAll(".filter-btn");
+            const archiveCards = document.querySelectorAll(".archive-card");
+
+            let currentCategory = "all";
+            let searchQuery = "";
+
+            function applyFilters() {
+                archiveCards.forEach((card) => {
+                    const cardCategory = card.getAttribute("data-category");
+                    const cardText = card.textContent.toLowerCase();
+
+                    const matchesCategory = currentCategory === "all" || cardCategory === currentCategory;
+                    const matchesSearch = cardText.includes(searchQuery);
+
+                    if (matchesCategory && matchesSearch) {
+                        card.style.display = "flex";
+                    } else {
+                        card.style.display = "none";
+                    }
+                });
+            }
+
+            if (searchInput) {
+                searchInput.addEventListener("input", (e) => {
+                    searchQuery = e.target.value.toLowerCase().trim();
+                    applyFilters();
+                });
+            }
+
+            filterBtns.forEach((btn) => {
+                btn.addEventListener("click", () => {
+                    filterBtns.forEach((b) => {
+                        b.classList.remove("active");
+                        b.setAttribute("aria-selected", "false");
+                    });
+                    btn.classList.add("active");
+                    btn.setAttribute("aria-selected", "true");
+                    currentCategory = btn.getAttribute("data-category");
+                    applyFilters();
+                });
+            });
+        });
+    </script>
     <script src="script.js"></script>
 </body>
 </html>

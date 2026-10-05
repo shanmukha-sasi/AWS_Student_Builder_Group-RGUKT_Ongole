@@ -3,106 +3,273 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="AWS Student Builder Group Mini Pitch event.">
-    <title>AWS Student Builder Group | Mini Pitch</title>
+    <meta name="description" content="AWS Student Builder Group Mini Pitch - Short-format idea validation, technical presentations, and editions 1 & 2 archives at RGUKT Ongole.">
+    <meta name="theme-color" content="#07111f">
+    <title>Minipitches | AWS Student Builder Group RGUKT Ongole</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <header class="site-header">
+<body class="page-minipitch">
+    <!-- Sticky Glass Navigation -->
+    <header class="site-header" id="siteHeader">
         <div class="header-inner">
-            <a href="index.html" class="brand">
-                <img src="assets/aws-logo.png" alt="AWS Logo">
-                <span>AWS Student Builder Group RGUKT Ongole</span>
+            <a href="index.html" class="brand" aria-label="AWS Student Builder Group RGUKT Ongole Home">
+                <span class="brand-badge">AWS</span>
+                <div class="brand-text">
+                    <span class="brand-title">Student Builder Group</span>
+                    <span class="brand-sub">RGUKT Ongole</span>
+                </div>
             </a>
-            <nav class="main-nav" aria-label="Main navigation">
-                <a href="index.html" data-page="index">Home</a>
-                <a href="team.html" data-page="team">Team</a>
-                <a href="workshops.html" data-page="workshops">Workshops</a>
-                <a href="hackathon.html" data-page="hackathon">Hackathon</a>
-                <a href="minipitch.html" data-page="minipitch">Mini Pitch</a>
+
+            <button class="mobile-nav-toggle" id="mobileNavToggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mainNav">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+
+            <nav class="main-nav" id="mainNav" aria-label="Main navigation">
+                <a href="index.html#about" class="nav-link">About</a>
+                <a href="workshops.html" class="nav-link">Events &amp; Workshops</a>
+                <a href="hackathon.html" class="nav-link">Hackathons</a>
+                <a href="minipitch.html" class="nav-link active" aria-current="page">Minipitches</a>
+                <a href="challenges.html" class="nav-link">Challenges</a>
+                <a href="index.html#team" class="nav-link">Team</a>
+                <a href="https://chat.whatsapp.com/Hy5V2t7DV6SDbpdqzxD9fQ" target="_blank" rel="noopener noreferrer" class="btn btn-nav-cta">
+                    <span>Join Community</span>
+                    <svg class="icon-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </a>
             </nav>
         </div>
     </header>
 
     <main>
-        <section class="page-hero">
+        <!-- Page Introduction Header -->
+        <section class="page-intro-section">
             <div class="page-container">
-                <span class="eyebrow">IDEAS DESERVE A STAGE</span>
-                <h1>Mini Pitch</h1>
-                <p>A short-form platform for students to present ideas, receive feedback, and turn concepts into actionable projects.</p>
-            </div>
-        </section>
-
-        <section class="pitch-overview">
-            <div class="page-container">
-                <div class="section-heading">
-                    <span class="eyebrow">EVENT OVERVIEW</span>
-                    <h2>Pitch. Connect. Improve.</h2>
-                </div>
-                <div class="pitch-highlights">
-                    <article>
-                        <span>01</span>
-                        <h3>Project Ideas</h3>
-                        <p>Participants present innovative ideas and explain the problems they want to solve.</p>
-                    </article>
-                    <article>
-                        <span>02</span>
-                        <h3>Technical Vision</h3>
-                        <p>Pitches communicate the proposed technology, architecture, and implementation approach.</p>
-                    </article>
-                    <article>
-                        <span>03</span>
-                        <h3>Community Feedback</h3>
-                        <p>Participants receive constructive feedback that helps strengthen their ideas.</p>
-                    </article>
+                <div class="intro-content text-center">
+                    <span class="eyebrow">IDEAS DESERVE A STAGE</span>
+                    <h1 class="page-main-title">Mini Pitch Initiative</h1>
+                    <p class="page-lead-text">
+                        A fast-paced platform designed for student builders to articulate novel technical concepts, present architectural visions, and receive immediate feedback from peers and mentors.
+                    </p>
                 </div>
             </div>
         </section>
 
-        <section class="feedback-section">
-            <div class="page-container">
-                <div class="section-heading">
-                    <span class="eyebrow">PARTICIPANT FEEDBACK</span>
-                    <h2>What Participants Said</h2>
-                </div>
-                <div class="feedback-grid">
-                    <blockquote>
-                        <p>"The Mini Pitch helped me explain my project clearly and understand how to improve the idea."</p>
-                        <cite>— Participant 01</cite>
-                    </blockquote>
-                    <blockquote>
-                        <p>"Getting feedback early helped us identify technical improvements before starting."</p>
-                        <cite>— Participant 02</cite>
-                    </blockquote>
-                    <blockquote>
-                        <p>"It was a great opportunity to learn from other students and discover different approaches."</p>
-                        <cite>— Participant 03</cite>
-                    </blockquote>
+        <!-- What is Mini Pitch -->
+        <section class="about-minipitch-section">
+            
+
+                <!-- Current Status Notice as per master spec -->
+                <div class="future-notice-card minipitch-status-card">
+                    <div class="notice-badge">
+                        <span class="pulse-indicator"></span>
+                        <span>STATUS: ARCHIVE ACTIVE</span>
+                    </div>
+                    <div class="notice-content">
+                        <h3>No Active or Upcoming Pitch Events Scheduled</h3>
+                        <p>All focus is currently directed into product builds following our latest pitch editions. The next round of Mini Pitch call-for-ideas will be announced across our WhatsApp channels.</p>
+                    </div>
+                    <a href="https://chat.whatsapp.com/Hy5V2t7DV6SDbpdqzxD9fQ" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-notice">
+                        <span>Get Notified for Edition 3</span>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                    </a>
                 </div>
             </div>
         </section>
 
-        <section class="gallery-section">
+        <!-- MiniPitch Edition 1 Archive -->
+        <section class="pitch-archive-section" id="edition1">
             <div class="page-container">
-                <div class="section-heading">
-                    <span class="eyebrow">EVENT MOMENTS</span>
-                    <h2>Photo Gallery</h2>
+                <div class="section-header">
+                    <div class="edition-header-row">
+                        <div>
+                            <span class="eyebrow">HISTORICAL ARCHIVE</span>
+                            <h2 class="section-title">MiniPitch 1.0 &bull; Inaugural Edition</h2>
+                            <p class="section-lead">The first campus pitch .</p>
+                        </div>
+                        <div class="edition-badge-pill">Resume Prep , Intro to AWS Builder Center</div>
+                    </div>
+                </div>
+
+
+
+                <!-- Edition 1 Photo Gallery (All 4 Images) -->
+                <div class="gallery-subtitle-bar">
+                    <h3>MiniPitch 1.0 Photo Moments</h3>
+                    <span>Tap any image to enlarge</span>
                 </div>
                 <div class="pitch-gallery">
-                    <img src="assets/minipitch/IMG_20260801_140520.jpg" alt="Mini Pitch event photo 1">
-                    <img src="assets/minipitch/IMG_20260801_141933.jpg" alt="Mini Pitch event photo 2">
-                    <img src="assets/minipitch/IMG_20260801_150451.jpg" alt="Mini Pitch event photo 3">
-                    <img src="assets/minipitch/IMG_20260801_163044.jpg" alt="Mini Pitch event photo 4">
+                    <div class="gallery-card">
+                        <img src="assets/AWS Website_photos /MiniPitch1/image1.jpg" alt="Student delivering inaugural pitch presentation" loading="lazy">
+                        <div class="gallery-caption">MiniPitch 1.0 &bull; Peer doubt solving</div>
+                    </div>
+                    <div class="gallery-card">
+                        <img src="assets/AWS Website_photos /MiniPitch1/image2.jpg" alt="Peer audience and mentors evaluating project ideas" loading="lazy">
+                        <div class="gallery-caption">MiniPitch 1.0 &bull; Teaching </div>
+                    </div>
+                    <div class="gallery-card">
+                        <img src="assets/AWS Website_photos /MiniPitch1/image3.jpg" alt="Student speaker explaining technical architecture" loading="lazy">
+                        <div class="gallery-caption">MiniPitch 1.0 &bull; Architectural Vision</div>
+                    </div>
+                    <div class="gallery-card">
+                        <img src="assets/AWS Website_photos /MiniPitch1/image4.jpg" alt="Mentors providing feedback during session" loading="lazy">
+                        <div class="gallery-caption">MiniPitch 1.0 &bull; AWS Builder Center</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- MiniPitch Edition 2 Archive -->
+        <section class="pitch-archive-section alt-bg" id="edition2">
+            <div class="page-container">
+                <div class="section-header">
+                    <div class="edition-header-row">
+                        <div>
+                            <span class="eyebrow">HISTORICAL ARCHIVE</span>
+                            <h2 class="section-title">MiniPitch 2.0 &bull; Scale &amp; Innovation</h2>
+                            <p class="section-lead">Mini pitch 2</p>
+                        </div>
+                        <div class="edition-badge-pill">AWS EC2 Instances and Autoscaling</div>
+                    </div>
+                </div>
+
+                
+
+                <!-- Edition 2 Photo Gallery (All 9 Images) -->
+                <div class="gallery-subtitle-bar">
+                    <h3>MiniPitch 2.0 Photo Moments</h3>
+                    <span>Tap any image to enlarge</span>
+                </div>
+                <div class="pitch-gallery">
+                    <div class="gallery-card">
+                        <img src="assets/AWS Website_photos /MiniPitch2/image1.jpg" alt="MiniPitch 2.0 opening session and hall atmosphere" loading="lazy">
+                        <div class="gallery-caption">MiniPitch 2.0 &bull; Hall Atmosphere</div>
+                    </div>
+                    <div class="gallery-card">
+                        <img src="assets/AWS Website_photos /MiniPitch2/image2.jpg" alt="Student explaining slide presentation to judges" loading="lazy">
+                        <div class="gallery-caption">MiniPitch 2.0 &bull; Problem Articulation</div>
+                    </div>
+                    <div class="gallery-card">
+                        <img src="assets/AWS Website_photos /MiniPitch2/image3.jpg" alt="Interactive speaker demonstration at MiniPitch 2.0" loading="lazy">
+                        <div class="gallery-caption">MiniPitch 2.0 &bull; Technical Concept</div>
+                    </div>
+                    <div class="gallery-card">
+                        <img src="assets/AWS Website_photos /MiniPitch2/image4.jpg" alt="Engaged audience listening to architecture pitch" loading="lazy">
+                        <div class="gallery-caption">MiniPitch 2.0 &bull; Student Cohort</div>
+                    </div>
+                    <div class="gallery-card">
+                        <img src="assets/AWS Website_photos /MiniPitch2/image5.jpg" alt="Close-up of participant defending system choices" loading="lazy">
+                        <div class="gallery-caption">MiniPitch 2.0 &bull; Defense Checkpoint</div>
+                    </div>
+                    <div class="gallery-card">
+                        <img src="assets/AWS Website_photos /MiniPitch2/image6.jpg" alt="Mentor giving active recommendations on cloud services" loading="lazy">
+                        <div class="gallery-caption">MiniPitch 2.0 &bull; Mentor Evaluation</div>
+                    </div>
+                    <div class="gallery-card">
+                        <img src="assets/AWS Website_photos /MiniPitch2/image7.jpg" alt="Student presentation in progress with visual slides" loading="lazy">
+                        <div class="gallery-caption">MiniPitch 2.0 &bull; Slide Walkthrough</div>
+                    </div>
+                    <div class="gallery-card">
+                        <img src="assets/AWS Website_photos /MiniPitch2/image8.jpg" alt="Participants discussing feedback during intermission" loading="lazy">
+                        <div class="gallery-caption">MiniPitch 2.0 &bull; Collaborative Huddle</div>
+                    </div>
+                    <div class="gallery-card">
+                        <img src="assets/AWS Website_photos /MiniPitch2/image9.jpg" alt="Group moment of builders and organizers at conclusion" loading="lazy">
+                        <div class="gallery-caption">MiniPitch 2.0 &bull; Valedictory Assembly</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final Community Call to Action -->
+        <section class="join-banner-section">
+            <div class="page-container">
+                <div class="cta-inner-card">
+                    <div class="cta-text">
+                        <span class="eyebrow eyebrow-light">Wanna Join?</span>
+                        <h2>Pitch at the Next Mini Pitch Edition</h2>
+                    </div>
+                    <div class="cta-actions">
+                        <a href="https://chat.whatsapp.com/Hy5V2t7DV6SDbpdqzxD9fQ" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-large">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+                            <span>Join WhatsApp Community</span>
+                        </a>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
 
+    <!-- Global Footer -->
     <footer class="site-footer">
-        <div class="footer-inner">
-            <p><span class="current-year"></span> AWS Student Builder Group. All rights reserved.</p>
+        <div class="page-container footer-container">
+            <div class="footer-grid">
+                <!-- Col 1: Identity -->
+                <div class="footer-col col-brand">
+                    <div class="brand footer-brand">
+                        <span class="brand-badge">AWS</span>
+                        <div class="brand-text">
+                            <span class="brand-title">Student Builder Group</span>
+                            <span class="brand-sub">RGUKT Ongole</span>
+                        </div>
+                    </div>
+                    <p class="footer-description">
+                        Empowering undergraduate engineers to design, build, and deploy resilient cloud architecture. A student-powered tech initiative affiliated with Rajiv Gandhi University of Knowledge Technologies, Ongole.
+                    </p>
+                    <div class="footer-social-row">
+                        <a href="https://www.linkedin.com/company/aws-sbg-rgukt-ongole/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg></a>
+                        <a href="https://www.instagram.com/awssbgrguktongole" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+                        <a href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg></a>
+                    </div>
+                </div>
+
+                <!-- Col 2: Navigation -->
+                <div class="footer-col">
+                    <h4 class="footer-heading">Platform</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html#about">About Community</a></li>
+                        <li><a href="workshops.html">Events &amp; Workshops</a></li>
+                        <li><a href="hackathon.html">Hackathons</a></li>
+                        <li><a href="minipitch.html">Minipitches</a></li>
+                        <li><a href="challenges.html">Challenges</a></li>
+                        <li><a href="index.html#team">Leadership Tree</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3: Governance -->
+                <div class="footer-col">
+                    <h4 class="footer-heading">Governance</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html#about">Code of Conduct</a></li>
+                        <li><a href="index.html#offerings">Builder Guidelines</a></li>
+                        <li><a href="https://aws.amazon.com" target="_blank" rel="noopener noreferrer">AWS Educate</a></li>
+                        <li><a href="https://rguktong.ac.in" target="_blank" rel="noopener noreferrer">RGUKT Ongole Portal</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 4: Contact -->
+                <div class="footer-col">
+                    <h4 class="footer-heading">Get Involved</h4>
+                    <p class="footer-text">Interested in mentoring, speaking at our tracks, or collaborating on a cloud challenge?</p>
+                    <a href="mailto:awssbg@rguktong.ac.in" class="footer-email">awssbg@rguktong.ac.in</a>
+                    <div class="footer-badge-pill">Campuses: RGUKT Ongole</div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; <span class="current-year">2026</span> AWS Student Builder Group &bull; RGUKT Ongole. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <span>Designed for Builders</span>
+                    <span>&bull;</span>
+                    <span>Powered by AWS</span>
+                </div>
+            </div>
         </div>
     </footer>
+
     <script src="script.js"></script>
 </body>
 </html>

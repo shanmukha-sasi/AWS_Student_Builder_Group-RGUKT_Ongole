@@ -3,58 +3,661 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="AWS Student Builder Group - a student-driven community building with cloud, AI, software and emerging technologies.">
+    <meta name="description" content="AWS Student Builder Group at RGUKT Ongole - Empowering student builders in cloud computing, serverless architectures, DevOps, and machine learning.">
     <meta name="theme-color" content="#07111f">
-    <title>AWS Student Builder Group | Build What's Next</title>
+    <title>AWS Student Builder Group | RGUKT Ongole</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <header class="site-header">
+<body class="page-home">
+    <!-- Sticky Glass Navigation -->
+    <header class="site-header" id="siteHeader">
         <div class="header-inner">
-            <a href="index.html" class="brand">
-                <img src="assets/aws-logo.png" alt="AWS Logo">
-                <span>AWS Student Builder Group RGUKT-Ongole</span>
+            <a href="index.html" class="brand" aria-label="AWS Student Builder Group RGUKT Ongole Home">
+                <span class="brand-badge">AWS</span>
+                <div class="brand-text">
+                    <span class="brand-title">Student Builder Group</span>
+                    <span class="brand-sub">RGUKT Ongole</span>
+                </div>
             </a>
-            <nav class="main-nav" aria-label="Main navigation">
-                <a href="index.html" data-page="index">Home</a>
-                <a href="team.html" data-page="team">Team</a>
-                <a href="workshops.html" data-page="workshops">Workshops</a>
-                <a href="hackathon.html" data-page="hackathon">Hackathon</a>
-                <a href="minipitch.html" data-page="minipitch">Mini Pitch</a>
+
+            <button class="mobile-nav-toggle" id="mobileNavToggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mainNav">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+
+            <nav class="main-nav" id="mainNav" aria-label="Main navigation">
+                <a href="#about" class="nav-link">About</a>
+                <a href="workshops.html" class="nav-link">Events &amp; Workshops</a>
+                <a href="hackathon.html" class="nav-link">Hackathons</a>
+                <a href="minipitch.html" class="nav-link">Minipitches</a>
+                <a href="challenges.html" class="nav-link">Challenges</a>
+                <a href="#team" class="nav-link">Team</a>
+                <a href="https://chat.whatsapp.com/Hy5V2t7DV6SDbpdqzxD9fQ" target="_blank" rel="noopener noreferrer" class="btn btn-nav-cta">
+                    <span>Join Community</span>
+                    <svg class="icon-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </a>
             </nav>
         </div>
     </header>
 
     <main>
-        <section class="hero">
+        <!-- Hero Section -->
+        <section class="hero-section" id="hero">
             <div class="page-container hero-container">
                 <div class="hero-content">
-                    <span class="eyebrow">AWS STUDENT BUILDER GROUP</span>
-                    <h1>Built to <span>Build.</span></h1>
-                    <p class="hero-description">A student-powered technology community where ideas become prototypes, prototypes become products, and students become confident builders.</p>
+                    <div class="hero-pill">
+                        <span class="pill-dot"></span>
+                        <span class="pill-text">Official Student Builder Chapter &bull; RGUKT Ongole</span>
+                    </div>
+                    <h1 class="hero-title">
+                        Empowering Student Builders at <span class="highlight-text">RGUKT Ongole</span>
+                    </h1>
+                    <p class="hero-subtitle">
+                        A student-led community focused on cloud computing, hands-on architectural design, and modern technology solutions powered by AWS.
+                    </p>
+
                     <div class="hero-actions">
-                        <a href="workshops.html" class="btn btn-primary">Explore Workshops</a>
-                        <a href="hackathon.html" class="btn btn-secondary">Explore Hackathon</a>
+                        <a href="https://chat.whatsapp.com/Hy5V2t7DV6SDbpdqzxD9fQ" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                            <svg class="btn-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+                            <span>Join WhatsApp Community</span>
+                        </a>
+                        <a href="#offerings" class="btn btn-secondary">
+                            <span>Explore Our Programs</span>
+                            <svg class="btn-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                        </a>
+                    </div>
+
+                    <!-- Social Links Bar -->
+                    <div class="social-bar-wrapper">
+                        <span class="social-bar-label">Connect with our network:</span>
+                        <div class="social-links-bar" aria-label="Social media channels">
+                            <a href="https://www.linkedin.com/company/aws-sbg-rgukt-ongole/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="social-chip">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                                <span>LinkedIn</span>
+                            </a>
+                            
+                            
+                      
+                            <a href="https://www.instagram.com/awssbgrguktongole" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="social-chip">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                                <span>Instagram</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Upcoming Event Spotlight Banner -->
+        <section class="spotlight-section" aria-label="Active Event Spotlight">
+            <div class="page-container">
+                <div class="spotlight-card">
+                    <div class="spotlight-tag">
+                        <span class="spotlight-pulse"></span>
+                        <span class="spotlight-label">NEXT ACTIVE EVENT</span>
+                    </div>
+                    <div class="spotlight-details">
+                        <div class="spotlight-meta">
+                            <span class="meta-date">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                                Oct 11 2026  &bull; Online
+                            </span>
+                            <span class="meta-category">Certification prep and Networking event</span>
+                        </div>
+                        <h2 class="spotlight-title">AWS Certifications roadmap  &amp; Career networking event</h2>
+                        <p class="spotlight-desc">Get to know about how to start your own certification journey and interact with industry professional who is 13x certified</p>
+                    </div>
+                    <div class="spotlight-action">
+                        <a href="workshops.html" class="btn btn-spotlight">
+                            <span>View Event Details</span>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About & Group Prestige -->
+        <section class="about-section" id="about">
+            <div class="page-container">
+                <div class="section-header">
+                    <span class="eyebrow">ABOUT THE COMMUNITY</span>
+                    <h2 class="section-title">Built by Students, Designed for Future Builders</h2>
+                    <p class="section-lead">The AWS Student Builder Group at RGUKT Ongole serves as an innovation crucible, cultivating industry-grade cloud competencies, architectural discipline, and high-impact software engineering.</p>
+                </div>
+
+                <!-- Mission & Core Focus -->
+                <div class="mission-focus-grid">
+                    <div class="mission-card">
+                        <div class="focus-icon-box">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"></path><path d="M2 17l10 5 10-5"></path><path d="M2 12l10 5 10-5"></path></svg>
+                        </div>
+                        <h3 class="card-heading">Our Mission</h3>
+                        <p class="card-text">
+                            Fostering technical excellence, cloud adoption, and collaborative building among students by translating academic potential into deployable enterprise-grade engineering.
+                        </p>
+                    </div>
+
+                    <div class="focus-pillars">
+                        <div class="pillar-card">
+                            <span class="pillar-dot"></span>
+                            <div>
+                                <h4>Cloud Architecture</h4>
+                                <p>Multi-tier VPCs, fault-tolerant infrastructure, and scalable compute systems.</p>
+                            </div>
+                        </div>
+                        <div class="pillar-card">
+                            <span class="pillar-dot"></span>
+                            <div>
+                                <h4>DevOps &amp; CI/CD</h4>
+                                <p>Automated deployment pipelines, containerization with Docker, and GitOps workflows.</p>
+                            </div>
+                        </div>
+                        <div class="pillar-card">
+                            <span class="pillar-dot"></span>
+                            <div>
+                                <h4>Serverless Development</h4>
+                                <p>Event-driven microservices using AWS Lambda, API Gateway, and managed databases.</p>
+                            </div>
+                        </div>
+                        <div class="pillar-card">
+                            <span class="pillar-dot"></span>
+                            <div>
+                                <h4>Machine Learning</h4>
+                                <p>Foundation models, generative AI integrations, and practical pipeline evaluation.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Impact Metrics Grid -->
+                <div class="impact-metrics-grid">
+                    <div class="metric-card">
+                        <span class="metric-value" data-target="500">200+</span>
+                        <span class="metric-label">Active Members</span>
+                        <span class="metric-sub">Aspiring engineers and cloud developers</span>
+                    </div>
+                    <div class="metric-card">
+                        <span class="metric-value" data-target="12">5+</span>
+                        <span class="metric-label">Events Hosted</span>
+                        <span class="metric-sub">Workshops, bootcamps, and hackathons</span>
+                    </div>
+                    <div class="metric-card">
+                        <span class="metric-value" data-target="45">5+</span>
+                        <span class="metric-label">Projects Built</span>
+                        <span class="metric-sub">Full-stack prototypes &amp; cloud systems</span>
+                    </div>
+                    <div class="metric-card">
+                        <span class="metric-value" data-target="60">10+</span>
+                        <span class="metric-label">Hands-on Lab Hours</span>
+                        <span class="metric-sub">Dedicated architectural training</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Programs & Offerings Overview (4 Interactive Teaser Cards) -->
+        <section class="offerings-section" id="offerings">
+            <div class="page-container">
+                <div class="section-header text-center">
+                    <span class="eyebrow">PROGRAMS &amp; OFFERINGS</span>
+                    <h2 class="section-title">Four Pillars of the Builder Ecosystem</h2>
+                    <p class="section-lead">Explore how our community takes students from foundational principles to competitive engineering achievements.</p>
+                </div>
+
+                <div class="programs-grid">
+                    <!-- Card 1: Events & Workshops -->
+                    <article class="program-card">
+                        <div class="card-top">
+                            <span class="program-badge">LEARN &amp; ARCHITECT</span>
+                            <span class="program-num">01</span>
+                        </div>
+                        <h3 class="program-name">Events &amp; Workshops</h3>
+                        <p class="program-summary">
+                            Guided architectural labs, technical awareness sessions, AWS certification preparation tracks, and interactive industry speaker Q&amp;As.
+                        </p>
+                        
+                        <a href="workshops.html" class="program-link" aria-label="Explore Events and Workshops">
+                            <span>Explore Workshops</span>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                        </a>
+                    </article>
+
+                    <!-- Card 2: Hackathons -->
+                    <article class="program-card">
+                        <div class="card-top">
+                            <span class="program-badge">BUILD &amp; SHIP</span>
+                            <span class="program-num">02</span>
+                        </div>
+                        <h3 class="program-name">Hackathons</h3>
+                        <p class="program-summary">
+                            Intensive, high-tempo product sprints including the flagship Nimbus Buildathon series where teams build viable tech prototypes within 24 to 48 hours.
+                        </p>
+                        
+                        <a href="hackathon.html" class="program-link" aria-label="Explore Hackathons">
+                            <span>Explore Hackathons</span>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                        </a>
+                    </article>
+
+                    <!-- Card 3: Minipitches -->
+                    <article class="program-card">
+                        <div class="card-top">
+                            <span class="program-badge">PITCH &amp; REFINE</span>
+                            <span class="program-num">03</span>
+                        </div>
+                        <h3 class="program-name">Minipitches</h3>
+                        <p class="program-summary">
+                             pitch sessions designed to cultivate idea validation, technical storytelling, public speaking, and rapid peer feedback.
+                        </p>
+                        
+                        <a href="minipitch.html" class="program-link" aria-label="Explore Minipitches">
+                            <span>Explore Minipitches</span>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                        </a>
+                    </article>
+
+                    <!-- Card 4: Challenges -->
+                    <article class="program-card">
+                        <div class="card-top">
+                            <span class="program-badge">SOLVE &amp; RANK</span>
+                            <span class="program-num">04</span>
+                        </div>
+                        <h3 class="program-name">Technical Challenges</h3>
+                        <p class="program-summary">
+                            Weekly and monthly architectural quizzes, cloud bug hunts, optimization quests, and hands-on cloud puzzles.
+                        </p>
+                        
+                        <a href="challenges.html" class="program-link" aria-label="Explore Technical Challenges">
+                            <span>Explore Challenges</span>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                        </a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Team Hierarchy (Visual Alternating Tree Structure) -->
+        <section class="team-hierarchy-section" id="team">
+            <div class="page-container">
+                <div class="section-header text-center">
+                    <span class="eyebrow">COMMUNITY LEADERSHIP</span>
+                    <h2 class="section-title">Team Structure &amp; Committee Tree</h2>
+                    <p class="section-lead">The dedicated student architects, directors, and associates shaping technical culture at RGUKT Ongole.</p>
+                </div>
+
+                <!-- Central Leadership Nodes -->
+                <div class="leadership-root">
+                    <div class="root-card-wrapper">
+                        <article class="person-card root-leader">
+                            <div class="card-avatar">
+                                <img src="assets/AWS Website_photos /team/FacultyCoordinator.png" alt="Faculty Coordinator" loading="lazy" onerror="this.src='https://ui-avatars.com/api/?name=Faculty+Coordinator&background=0b1728&color=ff9900'">
+                            </div>
+                            <div class="card-bio">
+                                <span class="role-badge">Faculty Coordinator</span>
+                                <h3 class="person-name">Ms.Bheema Shireesha</h3>
+                                <p class="person-affiliation">Department of Computer Science &amp; Engineering</p>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="root-connector-vertical"></div>
+
+                    <div class="root-card-wrapper">
+                        <article class="person-card root-leader highlight-leader">
+                            <div class="card-avatar">
+                                <img src="assets/AWS Website_photos /team/campus-leader.jpg" alt="Sadineni Shanmukha Sasi - AWS Student Builder Group Leader" loading="lazy" onerror="this.src='https://ui-avatars.com/api/?name=Shanmukha+Sasi&background=0b1728&color=ff9900'">
+                            </div>
+                            <div class="card-bio">
+                                <span class="role-badge role-badge-gold">Campus Leader</span>
+                                <h3 class="person-name">Sadineni Shanmukha Sasi</h3>
+                                <p class="person-title">AWS Student Builder Group Leader</p>
+                                <a href="https://www.linkedin.com/in/shanmukhasasi" target="_blank" rel="noopener noreferrer" class="member-linkedin" aria-label="Shanmukha Sasi LinkedIn Profile">
+                                    <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                                    <span>Connect on LinkedIn</span>
+                                </a>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                <!-- Tree Central Trunk & Alternating Branches -->
+                <div class="tree-trunk-container">
+                    <div class="tree-central-line"></div>
+
+                    <!-- Branch 1: Technical Team (Left Branch / Right Label) -->
+                    <div class="tree-branch branch-left">
+                        <div class="branch-connector"></div>
+                        <div class="branch-team-title">
+                            <span class="track-number">01</span>
+                            <h3>Technical Division</h3>
+                            <p>Architecture, serverless labs, and code execution.</p>
+                        </div>
+                        <div class="branch-tree-content">
+                            <!-- Lead Node -->
+                            <div class="branch-lead-node">
+                                <article class="person-card card-lead">
+                                    <div class="card-avatar">
+                                        <img src="assets/AWS Website_photos /team/Revan.png" alt="Revan Kumar Goud Bommagoni" loading="lazy" onerror="this.src='https://ui-avatars.com/api/?name=Revan+Kumar&background=0b1728&color=ff9900'">
+                                    </div>
+                                    <div class="card-bio">
+                                        <span class="role-badge">Division Lead</span>
+                                        <h4 class="person-name">Revan Kumar Goud Bommagoni</h4>
+                                        <p class="person-title">Technical Lead</p>
+                                        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="member-linkedin" aria-label="LinkedIn Profile">
+                                            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                                            <span>LinkedIn</span>
+                                        </a>
+                                    </div>
+                                </article>
+                            </div>
+                            <!-- Sub-branch Nodes (Associates) -->
+                            <div class="branch-associates-cluster">
+                                <article class="person-card card-associate">
+                                    <div class="card-avatar">
+                                        <img src="assets/AWS Website_photos /team/suhail.jpg" alt="Shaik Suhail" loading="lazy" onerror="this.src='https://ui-avatars.com/api/?name=Shaik+Suhail&background=0b1728&color=ff9900'">
+                                    </div>
+                                    <div class="card-bio">
+                                        <h5 class="person-name">Shaik Suhail</h5>
+                                        <p class="person-title">Technical Associate</p>
+                                        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="member-linkedin"><span>LinkedIn</span></a>
+                                    </div>
+                                </article>
+                                <article class="person-card card-associate">
+                                    <div class="card-avatar">
+                                        <img src="assets/AWS Website_photos /team/Nikhila.jpeg" alt="Naga sai Nikhila Katta" loading="lazy" onerror="this.src='https://ui-avatars.com/api/?name=Nikhila+Katta&background=0b1728&color=ff9900'">
+                                    </div>
+                                    <div class="card-bio">
+                                        <h5 class="person-name">Naga sai Nikhila Katta</h5>
+                                        <p class="person-title">Technical Associate</p>
+                                        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="member-linkedin"><span>LinkedIn</span></a>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Branch 2: Community Outreach (Right Branch / Left Label) -->
+                    <div class="tree-branch branch-right">
+                        <div class="branch-connector"></div>
+                        <div class="branch-team-title">
+                            <span class="track-number">02</span>
+                            <h3>Community Outreach</h3>
+                            <p>Ecosystem growth, student engagement, and cross-campus links.</p>
+                        </div>
+                        <div class="branch-tree-content">
+                            <!-- Lead Node -->
+                            <div class="branch-lead-node">
+                                <article class="person-card card-lead">
+                                    <div class="card-avatar">
+                                        <img src="assets/AWS Website_photos /team/Radesh.png" alt="Rashesh Reddy Yarram" loading="lazy" onerror="this.src='https://ui-avatars.com/api/?name=Rashesh+Reddy&background=0b1728&color=ff9900'">
+                                    </div>
+                                    <div class="card-bio">
+                                        <span class="role-badge">Director</span>
+                                        <h4 class="person-name">Rashesh Reddy Yarram</h4>
+                                        <p class="person-title">Community Outreach Director</p>
+                                        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="member-linkedin"><span>LinkedIn</span></a>
+                                    </div>
+                                </article>
+                            </div>
+                            <!-- Sub-branch Nodes -->
+                            <div class="branch-associates-cluster">
+                                <article class="person-card card-associate">
+                                    <div class="card-avatar">
+                                        <img src="assets/AWS Website_photos /team/Navyasree.png" alt="Palavari Navyasree" loading="lazy" onerror="this.src='https://ui-avatars.com/api/?name=Navyasree&background=0b1728&color=ff9900'">
+                                    </div>
+                                    <div class="card-bio">
+                                        <h5 class="person-name">Palavari Navyasree</h5>
+                                        <p class="person-title">Community Outreach Associate</p>
+                                        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="member-linkedin"><span>LinkedIn</span></a>
+                                    </div>
+                                </article>
+                                <article class="person-card card-associate">
+                                    <div class="card-avatar">
+                                        <img src="assets/AWS Website_photos /team/snovica.jpeg" alt="Channamsetty Snovica" loading="lazy" onerror="this.src='https://ui-avatars.com/api/?name=Snovica&background=0b1728&color=ff9900'">
+                                    </div>
+                                    <div class="card-bio">
+                                        <h5 class="person-name">Channamsetty Snovica</h5>
+                                        <p class="person-title">Community Outreach Associate</p>
+                                        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="member-linkedin"><span>LinkedIn</span></a>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Branch 3: Events & Operations (Left Branch / Right Label) -->
+                    <div class="tree-branch branch-left">
+                        <div class="branch-connector"></div>
+                        <div class="branch-team-title">
+                            <span class="track-number">03</span>
+                            <h3>Events &amp; Operations</h3>
+                            <p>Event execution, logistics, venue scheduling, and participant workflows.</p>
+                        </div>
+                        <div class="branch-tree-content">
+                            <!-- Lead Node -->
+                            <div class="branch-lead-node">
+                                <article class="person-card card-lead">
+                                    <div class="card-avatar">
+                                        <img src="assets/AWS Website_photos /team/Aditya.jpeg" alt="Panala Aditya" loading="lazy" onerror="this.src='https://ui-avatars.com/api/?name=Panala+Aditya&background=0b1728&color=ff9900'">
+                                    </div>
+                                    <div class="card-bio">
+                                        <span class="role-badge">Director</span>
+                                        <h4 class="person-name">Panala Aditya</h4>
+                                        <p class="person-title">Events &amp; Operations Director</p>
+                                        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="member-linkedin"><span>LinkedIn</span></a>
+                                    </div>
+                                </article>
+                            </div>
+                            <!-- Sub-branch Nodes -->
+                            <div class="branch-associates-cluster">
+                                <article class="person-card card-associate">
+                                    <div class="card-avatar">
+                                        <img src="assets/AWS Website_photos /team/reshma.jpg" alt="Bee Bee Reshma Shaik" loading="lazy" onerror="this.src='https://ui-avatars.com/api/?name=Reshma+Shaik&background=0b1728&color=ff9900'">
+                                    </div>
+                                    <div class="card-bio">
+                                        <h5 class="person-name">Bee Bee Reshma Shaik</h5>
+                                        <p class="person-title">Events &amp; Operations Associate</p>
+                                        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="member-linkedin"><span>LinkedIn</span></a>
+                                    </div>
+                                </article>
+                                <article class="person-card card-associate">
+                                    <div class="card-avatar">
+                                        <img src="assets/AWS Website_photos /team/salma.jpeg" alt="Shaik Banaganapalli Salma" loading="lazy" onerror="this.src='https://ui-avatars.com/api/?name=Salma+Shaik&background=0b1728&color=ff9900'">
+                                    </div>
+                                    <div class="card-bio">
+                                        <h5 class="person-name">Shaik Banaganapalli Salma</h5>
+                                        <p class="person-title">Event Management Associate</p>
+                                        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="member-linkedin"><span>LinkedIn</span></a>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Branch 4: Media & Creative (Right Branch / Left Label) -->
+                    <div class="tree-branch branch-right">
+                        <div class="branch-connector"></div>
+                        <div class="branch-team-title">
+                            <span class="track-number">04</span>
+                            <h3>Media &amp; Creative</h3>
+                            <p>Visual branding, event assets, design systems, and digital collateral.</p>
+                        </div>
+                        <div class="branch-tree-content">
+                            <!-- Lead Node -->
+                            <div class="branch-lead-node">
+                                <article class="person-card card-lead">
+                                    <div class="card-avatar">
+                                        <img src="assets/AWS Website_photos /team/sandeep.jpg" alt="Boda Sandeep Kumar" loading="lazy" onerror="this.src='https://ui-avatars.com/api/?name=Sandeep+Kumar&background=0b1728&color=ff9900'">
+                                    </div>
+                                    <div class="card-bio">
+                                        <span class="role-badge">Director</span>
+                                        <h4 class="person-name">Boda Sandeep Kumar</h4>
+                                        <p class="person-title">Media &amp; Creative Director</p>
+                                        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="member-linkedin"><span>LinkedIn</span></a>
+                                    </div>
+                                </article>
+                            </div>
+                            <!-- Sub-branch Nodes -->
+                            <div class="branch-associates-cluster">
+                                <article class="person-card card-associate">
+                                    <div class="card-avatar">
+                                        <img src="assets/AWS Website_photos /team/Sravya.jpg" alt="Grandhe Veera Venkata Sravya" loading="lazy" onerror="this.src='https://ui-avatars.com/api/?name=Sravya+Grandhe&background=0b1728&color=ff9900'">
+                                    </div>
+                                    <div class="card-bio">
+                                        <h5 class="person-name">Grandhe V. V. Sravya</h5>
+                                        <p class="person-title">Media &amp; Creative Associate</p>
+                                        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="member-linkedin"><span>LinkedIn</span></a>
+                                    </div>
+                                </article>
+                                <article class="person-card card-associate">
+                                    <div class="card-avatar">
+                                        <img src="assets/AWS Website_photos /team/sahith.jpeg" alt="Rokkala Sahith" loading="lazy" onerror="this.src='https://ui-avatars.com/api/?name=Sahith+Rokkala&background=0b1728&color=ff9900'">
+                                    </div>
+                                    <div class="card-bio">
+                                        <h5 class="person-name">Rokkala Sahith</h5>
+                                        <p class="person-title">Media &amp; Creative Associate</p>
+                                        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="member-linkedin"><span>LinkedIn</span></a>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Branch 5: PR & Social Media (Left Branch / Right Label) -->
+                    <div class="tree-branch branch-left">
+                        <div class="branch-connector"></div>
+                        <div class="branch-team-title">
+                            <span class="track-number">05</span>
+                            <h3>PR &amp; Social Media</h3>
+                            <p>Community narratives, public relations, LinkedIn broadcasts, and media channels.</p>
+                        </div>
+                        <div class="branch-tree-content">
+                            <!-- Lead Node -->
+                            <div class="branch-lead-node">
+                                <article class="person-card card-lead">
+                                    <div class="card-avatar">
+                                        <img src="assets/AWS Website_photos /team/Anil.jpg" alt="Chittukuri Anil Kumar" loading="lazy" onerror="this.src='https://ui-avatars.com/api/?name=Anil+Kumar&background=0b1728&color=ff9900'">
+                                    </div>
+                                    <div class="card-bio">
+                                        <span class="role-badge">Director</span>
+                                        <h4 class="person-name">Chittukuri Anil Kumar</h4>
+                                        <p class="person-title">PR &amp; Social Media Director</p>
+                                        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="member-linkedin"><span>LinkedIn</span></a>
+                                    </div>
+                                </article>
+                            </div>
+                            <!-- Sub-branch Nodes -->
+                            <div class="branch-associates-cluster">
+                                <article class="person-card card-associate">
+                                    <div class="card-avatar">
+                                        <img src="assets/AWS Website_photos /team/jeevanmai.png" alt="Palukuru Jeevanmai" loading="lazy" onerror="this.src='https://ui-avatars.com/api/?name=Jeevanmai&background=0b1728&color=ff9900'">
+                                    </div>
+                                    <div class="card-bio">
+                                        <h5 class="person-name">Palukuru Jeevanmai</h5>
+                                        <p class="person-title">PR &amp; Social Media Associate</p>
+                                        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="member-linkedin"><span>LinkedIn</span></a>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final Community Call to Action -->
+        <section class="join-banner-section">
+            <div class="page-container">
+                <div class="cta-inner-card">
+                    <div class="cta-text">
+                        <span class="eyebrow eyebrow-light">JOIN THE MOVEMENT</span>
+                        <h2>Ready to Build with the Cloud?</h2>
+                        <p>Be part of a thriving technical cohort. Attend guided architectural workshops, participate in hackathons, and launch real software products with AWS SBG RGUKT Ongole.</p>
+                    </div>
+                    <div class="cta-actions">
+                        <a href="https://chat.whatsapp.com/Hy5V2t7DV6SDbpdqzxD9fQ" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-large">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+                            <span>Join WhatsApp Community</span>
+                        </a>
                     </div>
                 </div>
             </div>
         </section>
     </main>
 
+    <!-- Global Footer -->
     <footer class="site-footer">
-        <div class="footer-inner">
-            <div class="footer-brand">
-                <strong>AWS Student Builder Group</strong>
-                <span>RGUKT Ongole</span>
+        <div class="page-container footer-container">
+            <div class="footer-grid">
+                <!-- Col 1: Identity -->
+                <div class="footer-col col-brand">
+                    <div class="brand footer-brand">
+                        <span class="brand-badge">AWS</span>
+                        <div class="brand-text">
+                            <span class="brand-title">Student Builder Group</span>
+                            <span class="brand-sub">RGUKT Ongole</span>
+                        </div>
+                    </div>
+                    <p class="footer-description">
+                        Empowering undergraduate engineers to design, build, and deploy resilient cloud architecture. A student-powered tech initiative affiliated with Rajiv Gandhi University of Knowledge Technologies, Ongole.
+                    </p>
+                    <div class="footer-social-row">
+                        <a href="https://www.linkedin.com/company/aws-sbg-rgukt-ongole/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg></a>
+                        <a href="https://www.instagram.com/awssbgrguktongole" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+                        <a href="https://chat.whatsapp.com/Hy5V2t7DV6SDbpdqzxD9fQ" target="_blank" rel="noopener noreferrer" aria-label="Whatsapp"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg></a>
+                    </div>
+                </div>
+
+                <!-- Col 2: Navigation -->
+                <div class="footer-col">
+                    <h4 class="footer-heading">Platform</h4>
+                    <ul class="footer-links">
+                        <li><a href="#about">About Community</a></li>
+                        <li><a href="workshops.html">Events &amp; Workshops</a></li>
+                        <li><a href="hackathon.html">Hackathons</a></li>
+                        <li><a href="minipitch.html">Minipitches</a></li>
+                        <li><a href="challenges.html">Challenges</a></li>
+                        <li><a href="#team">Leadership Tree</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3: Community & Conduct -->
+                <div class="footer-col">
+                    <h4 class="footer-heading">Governance</h4>
+                    <ul class="footer-links">
+                        <li><a href="#about">Code of Conduct</a></li>
+                        <li><a href="#offerings">Builder Guidelines</a></li>
+                        <li><a href="https://aws.amazon.com" target="_blank" rel="noopener noreferrer">AWS Educate</a></li>
+                        <li><a href="https://rguktong.ac.in" target="_blank" rel="noopener noreferrer">RGUKT Ongole Portal</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 4: Contact -->
+                <div class="footer-col">
+                    <h4 class="footer-heading">Get Involved</h4>
+                    <p class="footer-text">Interested in mentoring, speaking at our tracks, or collaborating on a cloud challenge?</p>
+                    <a href="mailto:awssbgrguktongole@gmail.com" class="footer-email">awssbgrguktongole@gmail.com</a>
+                    <a  class="footer-email">contact : +91 7396025334</a>
+                    <div class="footer-badge-pill">Campuses: RGUKT Ongole</div>
+                </div>
             </div>
-            <div class="social-links">
-                <a href="https://www.linkedin.com/company/aws-sbg-rgukt-ongole/" target="_blank">LinkedIn</a>
-                
-                <a href="https://www.instagram.com/awssbgrguktongole" target="_blank">Instagram</a>
+
+            <div class="footer-bottom">
+                <p>&copy; <span class="current-year">2026</span> AWS Student Builder Group &bull; RGUKT Ongole. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <span>Designed for Builders</span>
+                    <span>&bull;</span>
+                    <span>Powered by AWS</span>
+                </div>
             </div>
-            <p class="footer-copy"><span class="current-year"></span> AWS Student Builder Group. All rights reserved.</p>
         </div>
     </footer>
+
     <script src="script.js"></script>
 </body>
 </html>
