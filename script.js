@@ -318,6 +318,78 @@
     });
   }
 
+  // --- 8. Neon Scroll Highlight Effect for Continuous S-Tree ---
+  function initNeonScrollHighlight() {
+    const sContainer = document.getElementById('sTreeContainer');
+    const glowPath = document.getElementById('sTrackGlow');
+    if (!sContainer || !glowPath) return;
+
+    // Respect prefers-reduced-motion
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    // Calculate total path length
+    let pathLength = 0;
+    try {
+      pathLength = glowPath.getTotalLength();
+    } catch (e) {
+      pathLength = 3200;
+    }
+
+    glowPath.style.strokeDasharray = `${pathLength} ${pathLength}`;
+    glowPath.style.strokeDashoffset = `${pathLength}`;
+
+    let ticking = false;
+
+    const updateGlow = () => {
+      const rect = sContainer.getBoundingClientRect();
+      const viewportHeight = window.innerHeight;
+
+      // Calculate progress through the S-tree container
+      // Starts when the top enters viewport (offset by 20%), completes near the bottom
+      const startPoint = viewportHeight * 0.75;
+      const endPoint = viewportHeight * 0.25;
+      const totalDistance = rect.height + (startPoint - endPoint);
+      const currentScroll = startPoint - rect.top;
+
+      let progress = currentScroll / totalDistance;
+      progress = Math.max(0, Math.min(1, progress));
+
+      if (prefersReducedMotion) {
+        // Simple static highlight if in view
+        glowPath.style.strokeDashoffset = progress > 0.1 ? '0' : `${pathLength}`;
+      } else {
+        // Continuous smooth neon progression
+        const drawLength = pathLength * progress;
+        glowPath.style.strokeDashoffset = `${pathLength - drawLength}`;
+      }
+
+      ticking = false;
+    };
+
+    window.addEventListener(
+      'scroll',
+      () => {
+        if (!ticking) {
+          window.requestAnimationFrame(updateGlow);
+          ticking = true;
+        }
+      },
+      { passive: true }
+    );
+
+    // Initial calculation
+    updateGlow();
+
+    // Recalculate on window resize
+    window.addEventListener('resize', () => {
+      try {
+        pathLength = glowPath.getTotalLength();
+        glowPath.style.strokeDasharray = `${pathLength} ${pathLength}`;
+        updateGlow();
+      } catch (e) {}
+    });
+  }
+
   // --- Boot application on DOM ready ---
   onReady(() => {
     initHeader();
@@ -327,5 +399,6 @@
     initArchiveFilters();
     initStatCounters();
     initFooterYear();
+    initNeonScrollHighlight();
   });
 })();
